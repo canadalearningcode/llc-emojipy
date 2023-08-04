@@ -1,6 +1,6 @@
 ---
-slide-group: front-matter
-slide-group-name: Front matter
+slide_group: front-matter
+slide_group_name: Front matter
 ---
 
 # Front matter
@@ -33,11 +33,11 @@ slide-group-name: Front matter
 
 ## Today we will...
 
-1. Explore the intersections of math, art, and coding while building our own animated emojies using Processing and Python.
+1. Explore the intersections of math, art, and coding while building our own animated emojis using Processing and Python.
 2. Share curriculuar connections and assessment strategies.
 3. Leave with practical next steps for bringing coding into the classroom.
 
-<aside markdown>
+<aside data-markdown>
 Time: No more than 2 minutes.
 
 Review the learning objectives for the workshop.
