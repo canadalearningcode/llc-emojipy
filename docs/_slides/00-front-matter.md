@@ -34,7 +34,7 @@ slide_group_name: Front matter
 2. Share curriculuar connections and assessment strategies.
 3. Leave with practical next steps for bringing coding into the classroom.
 
-{% capture today-we-will %}
+{% capture notes %}
 <aside>
 Time: No more than 2 minutes.
 
