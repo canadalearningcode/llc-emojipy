@@ -6,11 +6,19 @@ program: Adult Programs, Ladies Learning Code
 <main>
 
 <section id="slide-content">
-{% for slide in site.slides %}
-    <section class="slide-group">
-    <header><h1 id="{{ slide.slide_group_name | slugify }}">{{ slide.slide_group_name }}</h1></header>
-    {{ slide.content }}
-    </section>
+{% for slidegroups in site.slides %}
+    {% for slide in slidegroups | split: "<h2>" %}
+        <article>
+            <div>
+    <h2>{{ slide.content }}
+            </div>
+            {% if slide.notes %}
+            <div>
+            {{ slide.notes }}
+            </div>
+            {% endif %}
+        </article>
+    {% endfor %}
 {% endfor %}
 </section>
 <section id="slide-navigation">
