@@ -2,8 +2,6 @@
 slide_group_name: Front matter
 ---
 
-# Front matter
-
 ## Title card
 
 ### Emoji Art with Processing and Python

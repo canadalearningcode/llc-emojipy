@@ -1,13 +1,12 @@
 ---
+slide_group_name: What is code?
 ---
-
-# What is code?
 
 ## Code is...
 
 A set of instructions that tell a computer what to do.
 
-**In code, we call a set of instructions an [algorithm].**
+**In code, we call a set of instructions an [algorithm](#).**
 
 <aside>
 Code is read in sequence (top down), meaning order matters. You need to give your computer instructions in order.
