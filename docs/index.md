@@ -16,7 +16,7 @@ program: Adult Programs, Ladies Learning Code
 <section id="slide-navigation">
 <ul>
 {% for slide in site.slides %}
-    <li><a href="#{{ slide.slide_group_name | slugify }}"></a></li>
+    <li><a href="#{{ slide.slide_group_name | slugify }}">{{ slide.slide_group_name }}</a></li>
 {% endfor %}
 </ul>
 </section>
