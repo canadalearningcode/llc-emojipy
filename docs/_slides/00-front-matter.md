@@ -1,5 +1,4 @@
 ---
-slide_group: front-matter
 slide_group_name: Front matter
 ---
 
