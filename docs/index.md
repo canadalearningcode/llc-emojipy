@@ -8,11 +8,9 @@ program: Adult Programs, Ladies Learning Code
 <section id="slide-content">
 {% for slidegroups in site.slides %}
     {% for slide in slidegroups.content | split: "</h2>" %}
-        {% capture slide.content }
-            {% cycle 'a': slide | prepend: "<h2>" , slide %}
-        {% endcapture %}
         <article>
-            {{ slide.content }}
+            {% assign header = slide | prepend: "<h2>" %} 
+            {% cycle 'a':  header , slide %}
         </article>
     {% endfor %}
 {% endfor %}
