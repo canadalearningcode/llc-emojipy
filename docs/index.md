@@ -10,12 +10,13 @@ program: Adult Programs, Ladies Learning Code
 {% for group in site.slides %}
 
 <section class="slide-group">
-    {% assign slidegroup = group.content | split: "<h2" | compact %}
+    {% assign slidegroup = group.content | split: "<h2" %}
     {% for slide in slidegroup %}
-
+        {% if slide contains "/h2>" %}
         <article class="slide">
             {{ slide | prepend: "<h2" }}
         </article>
+        {% endif %}
     {% endfor %}
 </section>
 
