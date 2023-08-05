@@ -21,7 +21,7 @@ aaa
 ## Housekeeping
 
 - Washrooms
-- Emergency exists
+- Emergency exits
 - Cell phones
 - Drinks and snacks
 
