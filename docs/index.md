@@ -6,7 +6,7 @@ program: Adult Programs, Ladies Learning Code
 <main>
 
 <section id="slide-content">
-<pre>
+
 {% for group in site.slides %}
 
 <section class="slide-group">
@@ -20,7 +20,7 @@ program: Adult Programs, Ladies Learning Code
 </section>
 
 {% endfor %}
-</pre>
+
 </section>
 
 <section id="slide-navigation">
