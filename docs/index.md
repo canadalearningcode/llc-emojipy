@@ -7,16 +7,12 @@ program: Adult Programs, Ladies Learning Code
 
 <section id="slide-content">
 {% for slidegroups in site.slides %}
-    {% for slide in slidegroups | split: "<h2>" %}
+    {% for slide in slidegroups.content | split: "</h2>" %}
+        {% capture slide.content }
+            {% cycle 'a': slide | prepend: "<h2>" , slide %}
+        {% endcapture %}
         <article>
-            <div>
-    <h2>{{ slide.content }}
-            </div>
-            {% if slide.notes %}
-            <div>
-            {{ slide.notes }}
-            </div>
-            {% endif %}
+            {{ slide.content }}
         </article>
     {% endfor %}
 {% endfor %}
