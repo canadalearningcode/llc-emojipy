@@ -12,7 +12,7 @@ A set of instructions that tell a computer what to do.
 Code is read in sequence (top down), meaning order matters. You need to give your computer instructions in order.
 </aside>
 
-# What is Processing.py
+## What is Processing.py
 
 * Created for artists & designers
 * Open source and free to use

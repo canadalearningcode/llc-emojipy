@@ -6,15 +6,22 @@ program: Adult Programs, Ladies Learning Code
 <main>
 
 <section id="slide-content">
-{% for slidegroups in site.slides %}
-    {% for slide in slidegroups.content | split: "</h2>" %}
-        <article>
-            {% assign header = slide | prepend: "<h2>" %} 
-            {% cycle 'a':  header , slide %}
+
+{% for group in site.slides %}
+
+<section class="slide-group">
+    {% for slide in group.content | split: "</h2>" %}
+        <article class="slide">
+            {% assign header = slide | append: "</h2>" %} 
+            {% cycle header , slide %}
         </article>
     {% endfor %}
-{% endfor %}
 </section>
+
+{% endfor %}
+
+</section>
+
 <section id="slide-navigation">
 <ul>
 {% for slide in site.slides %}
