@@ -11,10 +11,16 @@ program: Adult Programs, Ladies Learning Code
 
 <section class="slide-group">
     {% assign slide_group = group.content | split: "<hr>" %}
+    <pre>
+        {{ group.content | split: "<hr>" }}
+    </pre>
+    <pre>
+        {{ slide_group | inspect }}
+    </pre>
     {% for slide in slide_group %}
         
         <article class="slide">
-            {{ slide }}
+            {{ slide | inspect }}
         </article>
 
     {% endfor %}
