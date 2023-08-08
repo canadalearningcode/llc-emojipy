@@ -9,11 +9,11 @@ program: Adult Programs, Ladies Learning Code
 
 {% for group in site.slides %}
 
-<section class="slide-group" id="slide-group-{{ slide.slide_group_name | slugify }}">
+<section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}">
     {% assign slide_group = group.content | split: "<hr />" %}
     {% for slide in slide_group %}
         
-        <article class="slide" id="{{ slide.slide_group_name | slugify }}-{{ forloop.index }}">
+        <article class="slide" id="{{ group.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
         </article>
 
