@@ -3,6 +3,10 @@ title: Emoji Art with Processing and Python
 program: Adult Programs, Ladies Learning Code
 ---
 
+<head>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
 <main>
 
 <section id="slide-content">
