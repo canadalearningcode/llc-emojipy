@@ -1,29 +1,6 @@
 ---
-title: Getting Started
+title: Starter Proejct
 ---
-
-## Getting Started with Python, Trinket, and Processing
-
-{% raw %}
-
-<iframe src="https://trinket.io/embed/python/02e6c04961" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-{% endraw %}
-
-```python
-from processing import *
-
-def setup():
-    # ... code here runs once ...
-
-def draw():
-    # ... code here loops constantly ...
-
-run()
-```
-
-
-## Starter Project
 
 {% raw %}
 
@@ -31,7 +8,7 @@ run()
 
 {% endraw %}
 
-### Mapping Shapes to Coordinates
+## Mapping Shapes to Coordinates
 
 1. Take a look at the code that is already here. There’s a Head, Eye (eyeball + pupil), and Mouth. We have a few parts of our emoji already existing - we just need to move them to the correct place. 
 2. Move the Mouth: change the `x` and `y` values of the `arc`
@@ -53,4 +30,10 @@ fill(0,0,0) # black
 ellipse(200, 150, 25, 25) # circle
 ```
 
-### Drawing More Shapes
+## Drawing More Shapes
+
+We need to complete our emoji! We can either **(a) Copy the eye code and move it over**, or **(b) Draw a new shape using the Processing Python reference**: [py.processing.org/reference/](https://py.processing.org/reference/) 
+
+(A) To copy: 
+Select the eye + pupil code and COPY (ctrl+c) then PASTE (ctrl+v) the code inside of ‘draw’ 
+Change the x values so there are two eyes, side-by-side
