@@ -14,11 +14,9 @@ title: Getting Started
 from processing import *
 
 def setup():
-
     # ... code here runs once ...
 
 def draw():
-
     # ... code here loops constantly ...
 
 run()
@@ -33,10 +31,12 @@ run()
 
 {% endraw %}
 
+### Mapping Shapes to Coordinates
+
 1. Take a look at the code that is already here. There’s a Head, Eye (eyeball + pupil), and Mouth. We have a few parts of our emoji already existing - we just need to move them to the correct place. 
-2. Move the Mouth: change the x,y values of the arc
-3. Move the Eye: change the x,y values of the ellipse
-4. Move the Pupil (on top of the white eyeball): change the x,y values of the ellipse
+2. Move the Mouth: change the `x` and `y` values of the `arc`
+3. Move the Eye: change the `x` and `y` values of the `ellipse`
+4. Move the Pupil (on top of the white eyeball): change the `x` and `y` values of the `ellipse`
 5. Don’t forget to save! (top, right corner)
 
 ```python
@@ -52,3 +52,5 @@ ellipse(200, 150, 75, 75) # circle
 fill(0,0,0) # black
 ellipse(200, 150, 25, 25) # circle
 ```
+
+### Drawing More Shapes
