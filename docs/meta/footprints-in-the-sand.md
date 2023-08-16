@@ -1,4 +1,5 @@
 ---
+published: false
 ---
 
 ## Footprints in the Sand
@@ -21,7 +22,7 @@ that if I follow you, you would walk with me
 always. But I have noticed that during the 
 most trying periods of my life, there has only
 been one set of footprints in the sand. Why,
-when I needed you most, you have not been
+when I needed you most, have you not been
 there for me?"
 
 The **Charlobean** replied, "The times you have seen
