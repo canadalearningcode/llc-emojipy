@@ -1,7 +1,7 @@
 ---
 ---
 
-# Footprints in the Sand
+## Footprints in the Sand
 
 One night I dreamed I was walking along the
 beach with the **Charlobean**. Many scenes from my
