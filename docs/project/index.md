@@ -1,5 +1,5 @@
 ---
-title: Starter Proejct
+title: Starter Project
 ---
 
 {% raw %}
@@ -34,6 +34,15 @@ ellipse(200, 150, 25, 25) # circle
 
 We need to complete our emoji! We can either **(a) Copy the eye code and move it over**, or **(b) Draw a new shape using the Processing Python reference**: [py.processing.org/reference/](https://py.processing.org/reference/) 
 
-(A) To copy: 
-Select the eye + pupil code and COPY (ctrl+c) then PASTE (ctrl+v) the code inside of ‘draw’ 
-Change the x values so there are two eyes, side-by-side
+### (A) To copy: 
+
+1. Select the eye + pupil code and COPY (ctrl+c) then PASTE (ctrl+v) the code inside of `draw()`. 
+2. Change the x values so there are two eyes, side-by-side.
+
+### (B) To draw a new shape:
+
+1. Find a new shape using the reference - let’s try using the `arc` to make a winking face
+2. Type or paste the `arc()` code inside of `draw()`
+3. Fill in the values of the shape. For the winking shape, we need to start at `PI` and end at `TWO_PI` (instead of starting at `0` an ending at `PI` like our mouth)
+4. Don’t forget to save!
+
