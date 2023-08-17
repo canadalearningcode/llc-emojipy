@@ -16,10 +16,11 @@ Because of its many areas of use, Python is a great programming language to lear
 
 ### The bottom line
 
-From machine learning, to web development, to art, to automation, Python's popularity— ranked 4th on Stack Overflow's list of technologies used by professional developers— has only been growing. Regardless of your past experience (or lack of experience) with programming and programming languages, now is a great time to get started with Python!
+From machine learning, to web development, to art, to automation, Python's popularity— ranked 4th on Stack Overflow's list of technologies used by professional developers— has only been growing. Regardless of your past experience with programming, now is a great time to get started with Python!
 
 ## Learning objectives
 
+None! This workshop is designed for beginners.
 
 
 ## Prerequisites
