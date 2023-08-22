@@ -2,7 +2,7 @@
 title: Project outline
 ---
 
-_Jump to stretch/extension concepts_
+_[Jump to stretch/extension concepts](#stretch-concepts)_
 
 ## Flexible delivery note
 

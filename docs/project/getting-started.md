@@ -1,6 +1,6 @@
----
+<!-- ---
 title: Getting Started with Python, Trinket, and Processing
----
+--- -->
 
 {% raw %}
 
