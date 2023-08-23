@@ -1,12 +1,12 @@
 ---
-title: Project outline
+title: "Emoji Art with Python and Processing: Experience Outline"
 ---
 
-_[Jump to stretch/extension concepts](#stretch-concepts)_
+_Jump to [stretch/extension concepts](#stretch-concepts)_
 
 ## Flexible delivery note
 
-Instead of using the provided slide deck the entire time, you may instead switch to following this project outline a designated point in the experience. It is your responsibiliy to ensure that **each required item in a section's checklist** are completed before moving on. 
+Instead of using the provided slide deck the entire time, you may instead switch to following this project outline at a designated point in the experience. It is your responsibiliy to ensure that **each item in a section's checklist** has been completed or addressed before moving on. 
 
 Failure to complete a section's checklist may result in a confusing experience for learners as later sections may be dependent on skills or project progress from earlier sections. The expected output of each section is included at the beginning of each entry.
 
@@ -18,15 +18,18 @@ _Be sure to communicate to learners that additional information and reference ma
 
 - Follow slides up until learners open trinket (~slide 21)
 
+---
+
 ### Getting Started and Introducing Trinket (22-24)
 
 **Output**: Circle in middle of canvas; different background color.
 
+- **Getting Started sketch URL**: [https://trinket.io/python/02e6c04961](https://trinket.io/python/02e6c04961)
 - **Exercises 0 and 1:** Use the provided "Getting Started" Trinket to have learners make small modifications to the code, particularly moving elements around.
 - Introduce learners to the structure of a Processing sketch.
 - Have learners make use of the Processing reference.
 
----
+#### Checklist
 
 - Trinket:
   - [ ] Creating an account
@@ -37,11 +40,14 @@ _Be sure to communicate to learners that additional information and reference ma
   - [ ] Required parts of a sketch and how they relate to each other: `def setup()`, `def draw()`, `run()`
   - [ ] Accessing and using the [Processing Python reference (https://py.processing.org/reference/)](https://py.processing.org/reference/)
 
+---
+
 ### Processing Sketches and Python Syntax
 
+- **Getting Started sketch URL:** [https://trinket.io/python/02e6c04961](https://trinket.io/python/02e6c04961) 
 - Using the code from the Getting Started sketch, introduce basic/common Python syntax concepts such as `import`, calling functions, code flow, code blocks and comments `#`.
 
----
+#### Checklist
 
 - Processing:
   - [ ] Sketch code flow (reinforce `setup()` -> `draw()` -> `draw()` -> ...)
@@ -53,19 +59,24 @@ _Be sure to communicate to learners that additional information and reference ma
   - [ ] Code blocks are created with spacing/indentation
   - [ ] Comments `#`
 
+---
+
 ### The Starter Project
 
 **Output:** Emoji with one eye and mouth in place.
 
+- **Starter project URL:** [https://trinket.io/python/6dcd711327](https://trinket.io/python/6dcd711327)
 - **Exercise 2:** Analyse the starter project, specifically making note of the emoji elements that are already in place.
 - Reposition existing elements.
 - Review the `ellipse` primitive.
 
----
+#### Checklist
 
 - Processing:
   - [ ] XY-coordinate space
   - [ ] `ellipse()`
+
+---
 
 ### Completing the face
 
@@ -74,6 +85,11 @@ _Be sure to communicate to learners that additional information and reference ma
 - **Exercise 3:** Adding another eye
 - Write new eye code based on existing code.
 
+#### Checklist
+- No new concepts
+
+---
+
 ### `;)`
 
 **Output:** Emoji with one regular eye and one winking eye.
@@ -81,12 +97,14 @@ _Be sure to communicate to learners that additional information and reference ma
 - **Exercise 4:** `arc()` and comments `#`.
 - Use the `radians()` Processing function to convert angles expressed in degrees to radians.
 
----
+#### Checklist
 
 - Processing:
   - [ ] `arc()` and `radians()`
 - Python:
   - [ ] comments `#`
+
+---
 
 ### `:P` and `if ... else`
 
@@ -95,13 +113,15 @@ _Be sure to communicate to learners that additional information and reference ma
 - **Exercise 5:** Use the statement `if keyPressed:` inside the `draw()` function to make your sketch reactive to key presses.
 - **Exercise 6:** Expand the use of `if` with `else` to have code follow an alternate path depending on a condition, instead of just doing something extra (like in Ex. 5).
 
----
+#### Checklist
 
 - Processing:
   - [ ] `keyPressed` variable and `if keyPressed:`
 - Python:
   - [ ] Conditional statements using `if`.
   - [ ] Conditional statements using `if` and `else`
+
+---
   
 ### Processing and RGB colors
 
@@ -109,7 +129,7 @@ _Be sure to communicate to learners that additional information and reference ma
 
 - **Exercise 7:** Optionally use Adobe Color to find RGB values for new colors, then swap out colors for the background and emoji elements for the new colors.
 
----
+#### Checklist:
 
 - Processing:
   - [ ] Colors expressed as a mix of red, green, and blue.
@@ -120,13 +140,13 @@ _Be sure to communicate to learners that additional information and reference ma
 ## Stretch concepts
 
 ### Processing
-- Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`)
-- Managing styles with `pushStyle()` and `popStyle()`. `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
-- Reacting to specific keys with the `key` variable. Processing's `key` variable contains the character of the key that was last pressed.
-- `def keyReleased()`. Fires when a key is released. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
+1. Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`)
+2. Managing styles with `pushStyle()` and `popStyle()`. `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
+3. Reacting to specific keys with the `key` variable and `and`. Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
+4. `def keyReleased()`. Fires when a key is released. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
 
 ### Python 
-- `import random`. Use the `random` library and `random.randint()` to create random colors. Can potentially pair this with key press detection.
-- Lists `[]` and `random.choice()` to pick a value from a set of values.
-- Using variables (excl. Processing special variables) to make our code easier to maintain (color, position, size, etc.).
-- Setting and maintaining our own flags using variables (will likely require `global` as well)
+1. `import random`. Use the `random` library and `random.randint()` to create random colors. Can potentially pair this with key press detection.
+2. Lists `[]` and `random.choice()` to pick a value from a set of values.
+3. Using variables (excl. Processing special variables) to make our code easier to maintain (color, position, size, etc.).
+4. Setting and maintaining our own flags using variables (will likely require `global` as well)
