@@ -14,7 +14,7 @@ program: Adult Programs, Ladies Learning Code
     {% for slide in slide_group %}
         
         <article class="slide" id="{{ group.slide_group_name | slugify }}-{{ forloop.index }}">
-            {{ slide }}
+            {{ slide | replace: "<!--#","" | replace: "#-->","" }}
         </article>
 
     {% endfor %}
