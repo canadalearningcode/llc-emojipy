@@ -1,0 +1,19 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.slide-group {
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.slide {
+    padding:1rem;
+}
+
+.slide aside {
+    background-color:lightgrey;
+    padding:1rem;
+}
