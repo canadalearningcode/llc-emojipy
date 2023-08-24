@@ -7,7 +7,8 @@ module Jekyll
         # Dissect, concatenate, and return a new string (fastest method of all benchmarks)
         output = "#{input[0...last_index]}#{insertion_string}#{input[last_index...-1]}" if last_index
         # Fallback to input/original string if nothing is found
-        output || input
+        # output || input
+        "Jekyll Filter Test"
       end
     end
   end
