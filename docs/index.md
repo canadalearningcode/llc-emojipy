@@ -5,10 +5,6 @@ program: Adult Programs, Ladies Learning Code
 
 <main>
 
-<section id="github-info">
-{{ site.github }}
-</section>
-
 <section id="slide-content">
 
 {% for group in site.slides %}
