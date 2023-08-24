@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+html {
+    font-size: 200%;
+}
+
 .slide-group {
     display:flex;
     flex-direction: column;
