@@ -3,12 +3,12 @@
 
 @import "{{ site.theme }}";
 
-html {
-    font-size: 150%;
-}
+// html {
+//     font-size: 150%;
+// }
 
 #slide-content {
-    font-size:100%
+    font-size:1.5rem;
 }
 
 .slide-group {
@@ -20,7 +20,7 @@ html {
 .slide {
     padding:1rem;
     height:100vh;
-    max-height:600px;
+    min-height:600px;
     border:1px solid #ddd;
 }
 
