@@ -9,6 +9,8 @@ program: Adult Programs, Ladies Learning Code
 
 {% for group in site.slides %}
 
+{{ group.content | replace_last_instance_of: '<hr />', 'ASDF' }}
+
 <section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}">
     {% assign slide_group = group.content | split: "<hr />" %}
     {% for slide in slide_group %}
