@@ -2,6 +2,9 @@
 slide_group_name: Front matter
 ---
 
+* Toc
+{:toc}
+
 ## Title card
 
 ### Emoji Art with Processing and Python
