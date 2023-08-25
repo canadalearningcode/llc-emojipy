@@ -40,7 +40,7 @@ slide_group_name: Front matter
 
 ---
 
-## Today we will...
+## Today we will...{:.slide-title}
 
 1. Explore the intersections of math, art, and coding while building our own animated emojis using Processing and Python.
 2. Share curriculuar connections and assessment strategies.

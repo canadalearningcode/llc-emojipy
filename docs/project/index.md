@@ -50,7 +50,7 @@ _Be sure to communicate to learners that additional information and reference ma
 #### Checklist
 
 - Processing:
-  - [ ] Sketch code flow (reinforce `setup()` -> `draw()` -> `draw()` -> ...)
+  - [ ] Sketch code flow (reinforce `setup()` → `draw()` → `draw()` → ...)
 - Python:
   - [ ] Calling functions by `name` followed by parentheses `()`
   - [ ] `from processing import *` 
@@ -140,13 +140,20 @@ _Be sure to communicate to learners that additional information and reference ma
 ## Stretch concepts
 
 ### Processing
-1. Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`)
-2. Managing styles with `pushStyle()` and `popStyle()`. `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
-3. Reacting to specific keys with the `key` variable and `and`. Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
-4. `def keyReleased()`. Fires when a key is released. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
+1. **Managing styles with `pushStyle()` and `popStyle()`.** `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
+2. **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
+3. `def keyReleased()`. Fires when a key is released. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
+4. Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`).
 
 ### Python 
-1. `import random`. Use the `random` library and `random.randint()` to create random colors. Can potentially pair this with key press detection.
-2. Lists `[]` and `random.choice()` to pick a value from a set of values.
-3. Using variables (excl. Processing special variables) to make our code easier to maintain (color, position, size, etc.).
-4. Setting and maintaining our own flags using variables (will likely require `global` as well)
+1. **`import random`.** Use the `random` library and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection.
+```python
+import random
+
+def setup():
+  size(300,300)
+  background(35, 78, random.randint(128, 255))
+
+```
+2. **Lists `[]` and `random.choice()`.** Pick a value from a set of values.
+3. **Variables.** Make code easier to maintain (color, position, size, etc.) or add motion; use flags to have states persist (will likely require use of `global`)
