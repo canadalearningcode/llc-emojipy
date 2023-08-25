@@ -147,12 +147,38 @@ _Be sure to communicate to learners that additional information and reference ma
 ## Stretch concepts
 
 ### Processing
-1. **Managing styles with `pushStyle()` and `popStyle()`.** `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
+
 2. **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
-3. `def keyReleased()`. Fires when a key is released. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
+
+   ```python
+
+   if keyPressed:
+    
+    # check if the "t" key is pressed
+    if key == "t": 
+      # stick out the tongue
+      fill(198,75,80)
+      arc(width/2, 200, 100, 150, 0, radians(180))
+
+   ```
+
+   This can get a little janky since you can only get the _last_ key that's been pressed, i.e., it won't detect multiple keys being pressed at the same time. 
+
+3. `def keyReleased()`. Fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
+
+   ```python
+   def keyReleased():
+    global winking # winking is a variable that is True if the emoji should be winking and False otherwise
+    if key == "w":
+      winking = ~winking # toggle the variable winking using the not ~ operator
+   
+   ```
+
 4. Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`).
+1. **Managing styles with `pushStyle()` and `popStyle()`.** `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
 
 ### Python 
+
 1. **`import random`.** Use the `random` library and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection.
 
    ```python
@@ -166,3 +192,19 @@ _Be sure to communicate to learners that additional information and reference ma
 
 2. **Lists `[]` and `random.choice()`.** Pick a value from a set of values.
 3. **Variables.** Make code easier to maintain (color, position, size, etc.) or add motion; use flags to have states persist (will likely require use of `global`)
+4. **Custom functions.** `def` new functions to make code more scalable, e.g., a new "eye" function that creates an eye at a particular location. Can further elaborate on this by adding parameters for eye color, size, etc.
+
+   ```python
+
+   def draw():
+    # ... draw code ...#
+    drawEye(125,150) # left eye
+    drawEye(175,150) # right eye
+
+   def drawEye(x, y):
+    fill(255) # white, for the eye ball part
+    circle(x, y, 50, 50)
+    fill(0)
+    circle(x, y, 25, 25)
+   
+   ```
