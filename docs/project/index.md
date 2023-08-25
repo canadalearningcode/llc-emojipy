@@ -156,11 +156,11 @@ _Be sure to communicate to learners that additional information and reference ma
 1. **`import random`.** Use the `random` library and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection.
 
    ```python
-  import random
+   import random
 
-  def setup():
-    size(300,300)
-    background(35, 78, random.randint(128, 255))
+   def setup():
+     size(300,300)
+     background(35, 78, random.randint(128, 255))
 
    ```
 
