@@ -9,4 +9,4 @@ collections:
   - slides
 
 kramdown:
-  parse_block_html: true
+  # parse_block_html: true
