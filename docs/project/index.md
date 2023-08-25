@@ -12,6 +12,9 @@ Failure to complete a section's checklist may result in a confusing experience f
 
 _Be sure to communicate to learners that additional information and reference material can be found in the slide deck._
 
+* Toc
+{:toc}
+
 ## Sections
 
 ### Introduction, Context, and Setup (0-21)
