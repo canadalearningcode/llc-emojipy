@@ -14,12 +14,16 @@ nav.page-nav, nav.slide-group-nav {
 
 nav.page-nav > ul, nav.slide-group-nav > ul {
     position:absolute;
-    max-width:15rem;
+    max-width:12rem;
     left:-20rem;
     border:1px solid #ddd;
-    list-style:none;
+    
     // margin-left:0;
     padding:1rem;
+}
+
+nav.page-nav ul, nav.slide-group-nav ul {
+    list-style:none;
 }
 
 

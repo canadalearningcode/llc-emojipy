@@ -2,6 +2,13 @@
 title: "Emoji Art with Python and Processing: Experience Outline"
 ---
 
+<nav class="page-nav" markdown="1">
+
+* Toc
+{:toc}
+
+</nav>
+
 _Jump to [stretch/extension concepts](#stretch-concepts)_
 
 ## Flexible delivery note
@@ -11,13 +18,6 @@ Instead of using the provided slide deck the entire time, you may instead switch
 Failure to complete a section's checklist may result in a confusing experience for learners as later sections may be dependent on skills or project progress from earlier sections. The expected output of each section is included at the beginning of each entry.
 
 _Be sure to communicate to learners that additional information and reference material can be found in the slide deck._
-
-<nav class="page-nav" markdown="1">
-
-* Toc
-{:toc}
-
-</nav>
 
 ## Sections
 

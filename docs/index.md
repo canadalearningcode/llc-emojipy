@@ -13,6 +13,11 @@ program: Adult Programs, Ladies Learning Code
     {% assign slide_group = group.content | split: "<hr />" %}
     {% for slide in slide_group %}
         
+<nav class=slide-group-nav markdown="1">
+* Toc
+{:toc}
+</nav>
+
         <article class="slide" id="{{ group.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide | replace: "<!--#","" | replace: "#-->","" }}
         </article>
