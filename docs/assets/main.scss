@@ -12,8 +12,8 @@
 }
 
 .slide-group {
-    display:flex;
-    flex-direction: column;
+    display:grid;
+    // flex-direction: column;
     gap:1rem;
 }
 
