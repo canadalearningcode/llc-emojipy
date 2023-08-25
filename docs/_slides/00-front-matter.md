@@ -2,8 +2,12 @@
 slide_group_name: Front matter
 ---
 
+<nav class="slide-group-nav" markdown="1">
+
 * Toc
 {:toc}
+
+</nav>
 
 ## Title card
 

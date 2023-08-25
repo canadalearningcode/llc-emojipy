@@ -12,8 +12,12 @@ Failure to complete a section's checklist may result in a confusing experience f
 
 _Be sure to communicate to learners that additional information and reference material can be found in the slide deck._
 
+<nav class="page-nav" markdown="1">
+
 * Toc
 {:toc}
+
+</nav>
 
 ## Sections
 
