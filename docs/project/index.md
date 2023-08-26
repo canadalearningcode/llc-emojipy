@@ -2,6 +2,8 @@
 title: "Emoji Art with Python and Processing: Experience Outline"
 ---
 
+{::options toc_levels="1..3" /}
+
 <nav class="page-nav" markdown="1">
 
 * Toc
@@ -168,9 +170,9 @@ _Be sure to communicate to learners that additional information and reference ma
 
    ```python
    def keyReleased():
-    global winking # winking is a variable that is True if the emoji should be winking and False otherwise
+    global winking # variable is True if the emoji should be winking and False otherwise
     if key == "w":
-      winking = ~winking # toggle the variable winking using the not ~ operator
+      winking = ~winking # toggle boolean using the not ~ operator
    
    ```
 
@@ -204,7 +206,7 @@ _Be sure to communicate to learners that additional information and reference ma
    def drawEye(x, y):
     fill(255) # white, for the eye ball part
     circle(x, y, 50, 50)
-    fill(0)
+    fill(0) # black, for the pupil
     circle(x, y, 25, 25)
    
    ```
