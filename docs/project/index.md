@@ -150,9 +150,9 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ### Processing
 
-2.  **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
+2. **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
 
-    ```python
+   ```python
 
     if keyPressed:
       
@@ -162,50 +162,51 @@ _Be sure to communicate to learners that additional information and reference ma
         fill(198,75,80)
         arc(width/2, 200, 100, 150, 0, radians(180))
 
-    ```
+   ```
 
    This can get a little janky since you can only get the _last_ key that's been pressed, i.e., it won't detect multiple keys being pressed at the same time. You _can_ keep track of this yourself, e.g., by maintaining a list of keys that have been pressed and not released, but that's likely too advanced. It is included below for your reference.
 
-    ```python
+   ```python
 
     keysPressed = [] # create an empty list
 
     def keyPressed():
       global keysPressed
       if key not in keysPressed:
-      keysPressed.append(key)
-      print(keysPressed)
+        keysPressed.append(key)
 
     def keyReleased():
       global keysPressed
       if key in keysPressed:
-      keysPressed.remove(key)
+        keysPressed.remove(key)
 
-    ```
+   ```
 
-3.  `def keyReleased()`. Fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
+3. `def keyReleased()`. Fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
 
    ```python
-   def keyReleased():
+
+    def keyReleased():
     global winking # variable is True if the emoji should be winking and False otherwise
     if key == "w":
       winking = ~winking # toggle boolean using the not ~ operator
-   
+  
    ```
 
-4.  Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`).
-1.  **Managing styles with `pushStyle()` and `popStyle()`.** `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
+4. Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`).
+1. **Managing styles with `pushStyle()` and `popStyle()`.** `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
 
 ### Python 
 
 1. **`import random`.** Use the `random` library and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection.
 
    ```python
-   import random
 
-   def setup():
-     size(300,300)
-     background(35, 78, random.randint(128, 255))
+    import random
+
+    def setup():
+      size(300,300)
+      background(35, 78, random.randint(128, 255))
 
    ```
 
@@ -215,15 +216,15 @@ _Be sure to communicate to learners that additional information and reference ma
 
    ```python
 
-   def draw():
-    # ... draw code ...#
-    drawEye(125,150) # left eye
-    drawEye(175,150) # right eye
+    def draw():
+      # ... draw code ...#
+      drawEye(125,150) # left eye
+      drawEye(175,150) # right eye
 
-   def drawEye(x, y):
-    fill(255) # white, for the eye ball part
-    circle(x, y, 50, 50)
-    fill(0) # black, for the pupil
-    circle(x, y, 25, 25)
+    def drawEye(x, y):
+      fill(255) # white, for the eye ball part
+      circle(x, y, 50, 50)
+      fill(0) # black, for the pupil
+      circle(x, y, 25, 25)
    
    ```
