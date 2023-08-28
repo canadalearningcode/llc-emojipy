@@ -11,7 +11,7 @@ slide_group_name: Front matter
 
 ## Title card
 
-### Emoji Art with Processing and Python
+### Emoji Art with Python and Processing
 
 ---
 

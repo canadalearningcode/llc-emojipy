@@ -19,7 +19,7 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-h3 {
+h1, h3 {
     margin-top:2rem;
     font-weight:bold;
 }
@@ -40,11 +40,11 @@ nav.page-nav, nav.slide-group-nav {
 
 nav.page-nav > ul, nav.slide-group-nav > ul {
     position:absolute;
-    max-width:12rem;
-    right:-100%;
-    border:1px solid #ddd;
-    
-    // margin-left:0;
+    max-width:15rem;
+    width:max-content;
+    right:100%;
+    border-right:1px solid #ddd;
+
     padding:1rem;
 }
 
@@ -59,7 +59,7 @@ nav.page-nav > ul ul {
 
 nav.page-nav #markdown-toc {
     margin-left:0;
-    margin-right:3rem;
+    margin-right:2.5rem;
     background-color: var(--page-nav-background-color);
 }
 
