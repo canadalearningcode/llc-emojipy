@@ -99,7 +99,7 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ---
 
-### `;)`
+### `;)` (Winky face)
 
 **Output:** Emoji with one regular eye and one winking eye.
 
@@ -150,23 +150,40 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ### Processing
 
-2. **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
+2.  **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
 
-   ```python
+    ```python
 
-   if keyPressed:
-    
-    # check if the "t" key is pressed
-    if key == "t": 
-      # stick out the tongue
-      fill(198,75,80)
-      arc(width/2, 200, 100, 150, 0, radians(180))
+    if keyPressed:
+      
+      # check if the "t" key is pressed
+      if key == "t": 
+        # stick out the tongue
+        fill(198,75,80)
+        arc(width/2, 200, 100, 150, 0, radians(180))
 
-   ```
+    ```
 
-   This can get a little janky since you can only get the _last_ key that's been pressed, i.e., it won't detect multiple keys being pressed at the same time. 
+   This can get a little janky since you can only get the _last_ key that's been pressed, i.e., it won't detect multiple keys being pressed at the same time. You _can_ keep track of this yourself, e.g., by maintaining a list of keys that have been pressed and not released, but that's likely too advanced. It is included below for your reference.
 
-3. `def keyReleased()`. Fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
+    ```python
+
+    keysPressed = [] # create an empty list
+
+    def keyPressed():
+      global keysPressed
+      if key not in keysPressed:
+      keysPressed.append(key)
+      print(keysPressed)
+
+    def keyReleased():
+      global keysPressed
+      if key in keysPressed:
+      keysPressed.remove(key)
+
+    ```
+
+3.  `def keyReleased()`. Fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
 
    ```python
    def keyReleased():
@@ -176,8 +193,8 @@ _Be sure to communicate to learners that additional information and reference ma
    
    ```
 
-4. Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`).
-1. **Managing styles with `pushStyle()` and `popStyle()`.** `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
+4.  Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`).
+1.  **Managing styles with `pushStyle()` and `popStyle()`.** `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
 
 ### Python 
 
