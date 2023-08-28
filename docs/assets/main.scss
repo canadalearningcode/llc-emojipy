@@ -27,9 +27,11 @@ nav:is(.page-nav, .slide-group-nav) > ul {
 }
 
 nav.page-nav > ul > li > ul {
-    list-style: "\2013";
-    padding:.25rem 0 .25rem .25rem;
+    list-style-type: "\2013";
+}
 
+nav.page-nav > ul li {
+    padding:.25rem 0 .25rem .25rem;
 }
 
 
