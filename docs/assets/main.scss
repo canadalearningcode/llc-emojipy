@@ -22,8 +22,12 @@ nav.page-nav > ul, nav.slide-group-nav > ul {
     padding:1rem;
 }
 
-nav.page-nav ul, nav.slide-group-nav ul {
+nav (is:.page-nav, .slide-group-nav) ul {
     list-style:none;
+}
+
+nav.page-nav > ul li {
+
 }
 
 
