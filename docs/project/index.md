@@ -23,13 +23,13 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ## Sections
 
-### Introduction, Context, and Setup (0-21)
+### Introduction, Context, and Setup
 
 - Follow slides up until learners open trinket (~slide 21)
 
 ---
 
-### Getting Started and Introducing Trinket (22-24)
+### Getting Started and Introducing Trinket
 
 **Output**: Circle in middle of canvas; different background color.
 
