@@ -1,5 +1,5 @@
 ---
-title: "Emoji Art with Python and Processing: Experience Outline"
+title: "Experience Outline & Delivery Notes"
 ---
 
 {::options toc_levels="1..3" /}
@@ -87,7 +87,7 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ---
 
-### Completing the face
+### Completing the Face
 
 **Output:** Emoji with two eyes and a mouth
 
@@ -99,7 +99,7 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ---
 
-### `;)` (Winky face)
+### `;)` (winky face)
 
 **Output:** Emoji with one regular eye and one winking eye.
 
@@ -132,7 +132,7 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ---
   
-### Processing and RGB colors
+### Processing and RGB Colors
 
 **Output:** Complete emoji with colors that have been changed from their initial values.
 
@@ -146,16 +146,14 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ---
 
-## Stretch concepts
+## Stretch Concepts
 
 ### Processing
 
 2. **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
 
    ```python
-
-    if keyPressed:
-      
+    if keyPressed: 
       # check if the "t" key is pressed
       if key == "t": 
         # stick out the tongue
@@ -167,7 +165,6 @@ _Be sure to communicate to learners that additional information and reference ma
    This can get a little janky since you can only get the _last_ key that's been pressed, i.e., it won't detect multiple keys being pressed at the same time. You _can_ keep track of this yourself, e.g., by maintaining a list of keys that have been pressed and not released, but that's likely too advanced. It is included below for your reference.
 
    ```python
-
     keysPressed = [] # create an empty list
 
     def keyPressed():
@@ -185,7 +182,6 @@ _Be sure to communicate to learners that additional information and reference ma
 3. `def keyReleased()`. Fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
 
    ```python
-
     def keyReleased():
     global winking # variable is True if the emoji should be winking and False otherwise
     if key == "w":
@@ -201,13 +197,11 @@ _Be sure to communicate to learners that additional information and reference ma
 1. **`import random`.** Use the `random` library and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection.
 
    ```python
-
     import random
 
     def setup():
       size(300,300)
       background(35, 78, random.randint(128, 255))
-
    ```
 
 2. **Lists `[]` and `random.choice()`.** Pick a value from a set of values.
@@ -215,7 +209,6 @@ _Be sure to communicate to learners that additional information and reference ma
 4. **Custom functions.** `def` new functions to make code more scalable, e.g., a new "eye" function that creates an eye at a particular location. Can further elaborate on this by adding parameters for eye color, size, etc.
 
    ```python
-
     def draw():
       # ... draw code ...#
       drawEye(125,150) # left eye
