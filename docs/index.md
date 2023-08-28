@@ -1,5 +1,5 @@
 ---
-title: Emoji Art with Python and Processing
+title: Slides
 program: Adult Programs, Ladies Learning Code
 ---
 
