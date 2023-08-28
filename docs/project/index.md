@@ -1,5 +1,5 @@
 ---
-title: "Experience Outline & Delivery Notes"
+title: "Outline & Delivery Notes"
 ---
 
 {::options toc_levels="1..3" /}
