@@ -8,7 +8,7 @@
 {% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
     {{ slide_nav }}
 {% endcomment %}
-
+<section class="slide-group" id="slide-group-{{ slide_group.slide_group_name | slugify }}" >
     <nav class="slide-group-nav" id="{{ page.slide_group_name | slugify }}-nav">
         {% assign toc_id = page.slide_group_name | append: "-toc" %}
         {% include toc.html html=content sanitize=true class="inline_toc" id="toc_id" h_min=2 h_max=2 %}
@@ -20,6 +20,7 @@
         </article>
     {% endfor %}
     </section>
+</section>
 
 
 

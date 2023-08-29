@@ -7,11 +7,7 @@ program: Adult Programs, Ladies Learning Code
 
     {% for slide_group in site.slides %}
 
-    <section class="slide-group" id="slide-group-{{ slide_group.slide_group_name | slugify }}" >
-
         {{ slide_group }}
-
-    </section>
 
     {% endfor %}
 
