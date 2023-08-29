@@ -3,6 +3,13 @@ slide_group_name: What is code?
 layout: slide_group
 ---
 
+<nav class="slide-group-nav" markdown="1">
+
+* Toc
+{:toc}
+
+</nav>
+
 ## Code is...
 
 A set of instructions that tell a computer what to do.

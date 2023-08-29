@@ -13,6 +13,7 @@ program: Adult Programs, Ladies Learning Code
 <section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}" >
 
     {{ group }}
+    
     {% comment %}
     {% include slide_group.md content=group %}
 
