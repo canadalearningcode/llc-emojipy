@@ -1,13 +1,13 @@
 ---
 ---
 
-{% assign slide_group = content | split: "<hr />" %}
+{% assign slide_group = content | split: "</nav>" | split: "<hr />" offset:1 %}
 {% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
 
     {{ slide_nav }}
     
     {% for slide in slide_group %}
-        <article class="slide" id="{{ content.slide_group_name | slugify }}-{{ forloop.index }}">
+        <article class="slide" id="{{ slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
         </article>
     {% endfor %}
