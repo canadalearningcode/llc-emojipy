@@ -1,6 +1,7 @@
 ---
 title: Slides
 program: Adult Programs, Ladies Learning Code
+layout: slide_group
 ---
 
 <main>
@@ -10,6 +11,8 @@ program: Adult Programs, Ladies Learning Code
 {% for group in site.slides %}
 
 <section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}" >
+
+    {% include slide_group.html content=group %}
 
     {% assign slide_group = group.content | split: "<hr />" %}
     {% assign slide_nav = group.content | replace: "<!--#","<" | replace: "#-->",">" | split: "</nav>" | first | append: "</nav>" %}
