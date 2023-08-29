@@ -1,7 +1,7 @@
 ---
 ---
 
-{% assign slide_group = content | split: "</nav>" | slice: 1 | split: "<hr />" %}
+{% assign slide_group = content | split: "</nav>" | last | split: "<hr />" %}
 {% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
 
 {{ slide_group }}
