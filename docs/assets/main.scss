@@ -35,14 +35,6 @@ hr {
     background-color: white;
 }
 
-nav:is(.page-nav, .slide-group-nav) {
-    // position:sticky;
-    // top:1rem;
-
-    
-}
-
-// nav.page-nav > ul, nav.slide-group-nav > ul {
 nav:is(.page-nav, .slide-group-nav) > ul {
     
     position:sticky;
@@ -82,13 +74,14 @@ nav.page-nav > ul li {
     display:grid;
     grid-template-columns: var(--toc-width) var(--slide-width) auto;
     // flex-direction: column;
+    translate: calc(var(--toc-width) * -1) ;
     gap:1rem;
 }
 
 .slide-container {
     display:grid;
     gap:1rem;
-    translate: calc(var(--toc-width) * -1) ;
+    
 }
 
 .slide {
