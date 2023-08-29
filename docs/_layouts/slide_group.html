@@ -1,16 +1,18 @@
 ---
 ---
 
-
 {% assign slide_group = content | split: "</nav>" | last %}
-{% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
 {% assign slides = page.content | split: "<hr />" %}
+
 {% comment %}
+{% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
     {{ slide_nav }}
 {% endcomment %}
+
 {{ page | inspect }}
     <nav class="slide-group-nav" id="{{ page.slide_group_name | slugify }}-nav">
-{{ page.slide_toc }}
+        {% assign toc_id = page.slide_group_name | append: "-toc" %}
+        {% include toc.html html=content sanitize=true class="inline_toc" id="toc_id" h_min=2 h_max=3 %}
     </nav>
     
     {% for slide in slides  %}
