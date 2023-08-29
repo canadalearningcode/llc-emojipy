@@ -8,8 +8,8 @@
 
     {{ slide_nav }}
 
-    <nav class="slide-group-nav" id="{{ page.slide_group_name | slugify }}-nav" markdown="1">
-        {{ page.slide_toc }}
+    <nav class="slide-group-nav" id="{{ page.slide_group_name | slugify }}-nav">
+{{ page.slide_toc }}
     </nav>
     
     {% for slide in slides  %}
