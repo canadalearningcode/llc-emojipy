@@ -9,7 +9,7 @@ slide_group_name: Front matter
 
 </nav>
 
-## Title card
+## Welcome
 
 ### Emoji Art with Python and Processing
 
