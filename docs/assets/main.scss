@@ -93,9 +93,12 @@ nav.page-nav > ul li {
     translate: -300vh;
 }
 
-.slide-group:has(:target), #slide-content:not(:has(:target)) .slide-group:first-of-type, .slide-group:target {
+.slide-group:has(:target), 
+#slide-content:not(:has(:target)) .slide-group:first-of-type, 
+.slide-group:target {
     translate: calc(var(--toc-width) * -1 - 1rem) ;
     position:relative;
+    z-index: 100;
 }
 
 .slide-group {
