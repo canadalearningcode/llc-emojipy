@@ -3,12 +3,12 @@ slide_group_name: What is code?
 layout: slide_group
 ---
 
-<nav class="slide-group-nav" markdown="1">
+{% capture slide_toc %}
 
 * Toc
 {:toc}
 
-</nav>
+{% endcapture %}
 
 ## Code is...
 
