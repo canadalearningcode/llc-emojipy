@@ -8,9 +8,9 @@
 
     {{ slide_nav }}
 
- 
-    {{ toc | markdownify }}
-    <pre>{{ slides | inspect}}</pre>
+    <nav class="slide-group-nav" id="{{ page.slide_group_name | slugify }}-nav" markdown="1">
+        {{ page.slide_toc }}
+    </nav>
     
     {% for slide in slides  %}
         <article class="slide" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">

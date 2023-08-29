@@ -5,8 +5,12 @@ layout: slide_group
 
 <nav class="slide-group-nav" markdown="1">
 
+{% capture slide_toc %}
+
 * Toc
 {:toc}
+
+{% endcapture %}
 
 </nav>
 
