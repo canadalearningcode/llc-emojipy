@@ -12,13 +12,13 @@ program: Adult Programs, Ladies Learning Code
 <section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}" >
 
     {% assign slide_group = group.content | split: "<hr />" %}
-    {% assign slide_nav = group.content | split: "</nav>" | first | append: "</nav>" %}
+    {% assign slide_nav = group.content | replace: "<!--#","<" | replace: "#-->",">" | split: "</nav>" | first | append: "</nav>" %}
 
         {{ slide_nav }}
     
     {% for slide in slide_group %}
         <article class="slide" id="{{ group.slide_group_name | slugify }}-{{ forloop.index }}">
-            {{ slide | replace: "<!--#","" | replace: "#-->","" }}
+            {{ slide }}
         </article>
 
     {% endfor %}

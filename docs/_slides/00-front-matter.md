@@ -2,12 +2,12 @@
 slide_group_name: Front matter
 ---
 
-<nav class="slide-group-nav" markdown="1">
+<!--#nav class="slide-group-nav" markdown="1">
 
 * Toc
 {:toc}
 
-</nav>
+</nav#-->
 
 ## Welcome
 
