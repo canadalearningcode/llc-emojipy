@@ -1,0 +1,17 @@
+
+{% assign slide_content = include.content | replace: "<!--#","<" | replace: "#-->",">" | split: "</nav>"  %}
+{% assign slide_nav = slide_content | first | append: "</nav>" %}
+
+
+{% assign slide_group = slide_content offset:1 | split: "<hr />" %}
+
+    {# assign slide_nav = include.content | replace: "<!--#","<" | replace: "#-->",">" | split: "</nav>" | first | append: "</nav>" #}
+
+        {{ slide_nav }}
+    
+    {% for slide in slide_group %}
+        <article class="slide" id="{{ include.content.slide_group_name | slugify }}-{{ forloop.index }}">
+            {{ slide }}
+        </article>
+
+    {% endfor %}
