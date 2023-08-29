@@ -81,14 +81,14 @@ nav.page-nav > ul li {
 }
 
 .slide-group:has(:target) ~ .slide-group {
-    translate: 150rem;
+    translate: 300vh;
 }
 
-.slide-group:has(~ .slide-group:has(:target)) {
+.slide-group:has(~ .slide-group :target, .slide-group:target){
     translate: -300vh;
 }
 
-.slide-group:has(:target) {
+.slide-group:has(:target), #slide-content:not(:has(:target)) .slide-group:first-of-type {
     translate: calc(var(--toc-width) * -1 - 1rem) ;
 }
 
