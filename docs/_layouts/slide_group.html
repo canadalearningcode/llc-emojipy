@@ -1,15 +1,15 @@
 ---
 ---
 
-{{ page | inspect }}
-
 {% assign slide_group = content | split: "</nav>" | slice: 1 | split: "<hr />" %}
 {% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
 
     {{ slide_nav }}
 
+    {% comment %}
     {{ toc | markdownify }}
-    
+    {% endcomment %}
+
     {% for slide in slide_group %}
         <article class="slide" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
