@@ -4,7 +4,7 @@
 
 {% assign slide_group = content | split: "</nav>" | last %}
 {% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
-{% assign slides = slide_group | split: "<hr />"}
+{% assign slides = slide_group | split: "<h2>"}
 
     {{ slide_nav }}
 
