@@ -35,19 +35,24 @@ hr {
     background-color: white;
 }
 
+.page-content {
+    overflow:hidden;
+}
+
 nav:is(.page-nav, .slide-group-nav) > ul {
     
     position:sticky;
     // right:100%;
-    top:1rem;
+    // top:1rem;
+    top:0;
 
     width:max-content;
-    max-width:var(--toc-width);
-    padding:1rem;   
+    max-width:calc(var(--toc-width) - 1rem);
+    // padding:1rem;   
     margin-left:0;
     // margin-right:2.5rem;
 
-    border-right:1px solid #ddd;
+    // border-right:1px solid #ddd;
     background-color: var(--page-nav-background-color);
     list-style:none;
     
@@ -67,7 +72,16 @@ nav.page-nav > ul li {
 
 
 #slide-content {
-    font-size:1.25rem;
+    font-size:1.5rem;
+    display:flex;
+}
+
+.slide-group:has(:target) ~ .slide-group:not(:has(:target)) {
+    translate: 150rem;
+}
+
+.slide-group:has(~ .slide-group:has(:target)) {
+    translate: -150rem;
 }
 
 .slide-group {
@@ -76,6 +90,7 @@ nav.page-nav > ul li {
     // flex-direction: column;
     translate: calc(var(--toc-width) * -1 - 1rem) ;
     gap:1rem;
+    transition: translate .5s;
 }
 
 .slide-container {
