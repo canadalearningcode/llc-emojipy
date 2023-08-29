@@ -1,7 +1,9 @@
+---
+---
 
 {{ include.content | inspect }}
 
-{% assign slide_content = include.content | replace: "<!--#","<" | replace: "#-->",">" | split: "</nav>"  %}
+{% assign slide_content = include.content | replace: "<!--#","" | replace: "#-->","" | split: "</nav>"  %}
 {% assign slide_nav = slide_content | first | append: "</nav>" %}
 {{ slide_content | inspect }}
 
@@ -9,7 +11,7 @@
 {% assign slide_group = slide_content offset:1 | split: "<hr />" %}
 
     {% comment %}
-    {% assign slide_nav = include.content | replace: "<!--#","<" | replace: "#-->",">" | split: "</nav>" | first | append: "</nav>" %}
+    
     {% endcomment %}
 
         {{ slide_nav }}

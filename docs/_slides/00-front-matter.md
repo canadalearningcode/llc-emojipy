@@ -2,12 +2,12 @@
 slide_group_name: Front matter
 ---
 
-<!--#nav class="slide-group-nav" markdown="1">
+<!--# <nav class="slide-group-nav" markdown="1">
 
 * Toc
 {:toc}
 
-</nav#-->
+</nav> #-->
 
 ## Welcome
 
@@ -54,7 +54,7 @@ slide_group_name: Front matter
 2. Share curriculuar connections and assessment strategies.
 3. Leave with practical next steps for bringing coding into the classroom.
 
-<!--# <aside class="slide-notes"> #-->
+<aside class="slide-notes" markdown="1">
 
 **Time:** No more than 2 minutes.
 
@@ -62,4 +62,4 @@ _Review the learning objectives for the workshop._
 
 **Say:** “In this session, we will be walking through an art activity that you can use as-is with your students. As you’ll see, we’ve wrapped this student activity with some educator-specific resources. If you’d like to use this lesson with your own students, there is a lesson plan available on our new Learning Tool. Don’t worry - we’ll share this later today.”
 
-<!--# </aside> #-->
+</aside>
