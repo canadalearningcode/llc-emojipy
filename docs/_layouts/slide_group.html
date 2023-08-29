@@ -1,7 +1,13 @@
 ---
 ---
 
+{% capture toc %}
+
 * Toc
 {:toc}
+
+{% endcapture %}
+
+{{ toc | markdownify }}
 
 {{ content }}
