@@ -39,7 +39,7 @@ nav:is(.page-nav, .slide-group-nav) {
 }
 
 // nav.page-nav > ul, nav.slide-group-nav > ul {
-nav:is(.page-nav, .slide-group-nav) #markdown-toc {
+nav:is(.page-nav, .slide-group-nav) > ul {
     
     position:absolute;
     right:100%;
