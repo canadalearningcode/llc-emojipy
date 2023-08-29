@@ -7,7 +7,7 @@
     {{ slide_nav }}
     
     {% for slide in slide_group %}
-        <article class="slide" id="{{ slide_group_name | slugify }}-{{ forloop.index }}">
+        <article class="slide" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
         </article>
     {% endfor %}
