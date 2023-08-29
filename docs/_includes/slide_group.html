@@ -5,7 +5,6 @@
 
 {% assign slide_content = include.content | replace: "<!--#","" | replace: "#-->","" | split: "</nav>"  %}
 {% assign slide_nav = slide_content | first | append: "</nav>" %}
-{{ slide_content | inspect }}
 
 
 {% assign slide_group = slide_content offset:1 | split: "<hr />" %}
@@ -14,11 +13,11 @@
     
     {% endcomment %}
 
-        {{ slide_nav }}
+        {{ slide_nav | markdownify }}
     
     {% for slide in slide_group %}
         <article class="slide" id="{{ include.content.slide_group_name | slugify }}-{{ forloop.index }}">
-            {{ slide }}
+            {{ slide | markdownify }}
         </article>
 
     {% endfor %}
