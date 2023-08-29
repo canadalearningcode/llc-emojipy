@@ -74,7 +74,7 @@ nav.page-nav > ul li {
     display:grid;
     grid-template-columns: var(--toc-width) var(--slide-width) auto;
     // flex-direction: column;
-    translate: calc(var(--toc-width) * -1) ;
+    translate: calc(var(--toc-width) * -1 - 1rem) ;
     gap:1rem;
 }
 
