@@ -89,7 +89,9 @@ nav.page-nav > ul li {
     translate: 300vh;
 }
 
-.slide-group:has(~ .slide-group :target, .slide-group:target){
+.slide-group:has(
+    ~ .slide-group :target, 
+    ~ .slide-group:target) {
     translate: -300vh;
 }
 
