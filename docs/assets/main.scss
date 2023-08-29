@@ -91,6 +91,7 @@ nav.page-nav > ul li {
 
 .slide-group:has(:target), #slide-content:not(:has(:target)) .slide-group:first-of-type {
     translate: calc(var(--toc-width) * -1 - 1rem) ;
+    position:relative;
 }
 
 .slide-group {
