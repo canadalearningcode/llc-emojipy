@@ -40,7 +40,7 @@ hr {
 }
 
 .page-content {
-    overflow:hidden;
+    // overflow:hidden;
 }
 
 nav:is(.page-nav, .slide-group-nav) > ul {
@@ -93,6 +93,7 @@ nav.page-nav > ul li {
 }
 
 .slide-group {
+    position:absolute;
     display:grid;
     grid-template-columns: var(--toc-width) var(--slide-width) auto;
     // flex-direction: column;
