@@ -1,5 +1,6 @@
 ---
 slide_group_name: What is code?
+layout: slide_group
 ---
 
 ## Code is...

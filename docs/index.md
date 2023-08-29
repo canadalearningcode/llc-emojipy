@@ -11,10 +11,10 @@ program: Adult Programs, Ladies Learning Code
 {% for group in site.slides %}
 
 <section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}" >
-
+    {% comment %}
     {% include slide_group.md content=group %}
 
-    {% comment %}
+    
     {% assign slide_group = group.content | split: "<hr />" %}
     {% assign slide_nav = group.content | replace: "<!--#","<" | replace: "#-->",">" | split: "</nav>" | first | append: "</nav>" %}
 

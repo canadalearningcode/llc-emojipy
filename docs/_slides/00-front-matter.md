@@ -1,5 +1,6 @@
 ---
 slide_group_name: Front matter
+layout: slide_group
 ---
 
 <!--# <nav class="slide-group-nav" markdown="1">
