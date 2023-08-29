@@ -1,6 +1,3 @@
----
----
-
 {% assign slide_content = include.content | replace: "<!--#","" | replace: "#-->","" | split: "</nav>"  %}
 {% assign slide_nav = slide_content | first | append: "</nav>" %}
 
