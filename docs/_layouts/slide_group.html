@@ -11,9 +11,9 @@
 
  
     {{ toc | markdownify }}
-
-
-    {% for slide in slide_group | split: "<hr>" %}
+    <pre>{{ slide_group | inspect}}</pre>
+    
+    {% for slide in slide_group | split: "<hr/>" %}
         <article class="slide" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
         </article>
