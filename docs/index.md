@@ -12,8 +12,9 @@ program: Adult Programs, Ladies Learning Code
 
 <section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}" >
 
-    {% include slide_group.html content=group %}
+    {% include slide_group.md content=group %}
 
+    {% comment %}
     {% assign slide_group = group.content | split: "<hr />" %}
     {% assign slide_nav = group.content | replace: "<!--#","<" | replace: "#-->",">" | split: "</nav>" | first | append: "</nav>" %}
 
@@ -25,6 +26,7 @@ program: Adult Programs, Ladies Learning Code
         </article>
 
     {% endfor %}
+    {% endcomment %}
 </section>
 
 {% endfor %}
