@@ -1,7 +1,7 @@
 ---
 title: Slides
 program: Adult Programs, Ladies Learning Code
-layout: slide_group
+# layout: slide_group
 ---
 
 <main>
