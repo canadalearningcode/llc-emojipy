@@ -4,6 +4,10 @@
 {% assign slide_group = content | split: "</nav>" | slice: 1 | split: "<hr />" %}
 {% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
 
+{{ slide_group }}
+
+{{ slide_group | inspect }}
+
     {{ slide_nav }}
 
     {% comment %}
