@@ -80,6 +80,11 @@ nav.page-nav > ul li {
 .slide-group {
     display:grid;
     // flex-direction: column;
+    // gap:1rem;
+}
+
+.slide-container {
+    display:grid;
     gap:1rem;
 }
 

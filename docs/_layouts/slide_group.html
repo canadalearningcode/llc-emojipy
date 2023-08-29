@@ -13,13 +13,13 @@
         {% assign toc_id = page.slide_group_name | append: "-toc" %}
         {% include toc.html html=content sanitize=true class="inline_toc" id="toc_id" h_min=2 h_max=3 %}
     </nav>
-    
+    <section class="slide-container">
     {% for slide in slides  %}
         <article class="slide" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
         </article>
     {% endfor %}
-
+    </section>
 
 
 
