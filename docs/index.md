@@ -5,15 +5,15 @@ program: Adult Programs, Ladies Learning Code
 ---
 <section id="slide-content">
 
-{% for slide_group in site.slides %}
+    {% for slide_group in site.slides %}
 
-<section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}" >
+    <section class="slide-group" id="slide-group-{{ slide_group.slide_group_name | slugify }}" >
 
-    {{ slide_group }}
+        {{ slide_group }}
 
-</section>
+    </section>
 
-{% endfor %}
+    {% endfor %}
 
 </section>
 
