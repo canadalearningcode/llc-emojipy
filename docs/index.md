@@ -11,6 +11,8 @@ program: Adult Programs, Ladies Learning Code
 {% for group in site.slides %}
 
 <section class="slide-group" id="slide-group-{{ group.slide_group_name | slugify }}" >
+
+    {{ group }}
     {% comment %}
     {% include slide_group.md content=group %}
 
