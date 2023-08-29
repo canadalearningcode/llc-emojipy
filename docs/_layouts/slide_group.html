@@ -3,17 +3,16 @@
 
 
 {% assign slide_group = content | split: "</nav>" | last %}
-
 {% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
-
+{% assign slides = slide_group | split: "<hr />"}
 
     {{ slide_nav }}
 
  
     {{ toc | markdownify }}
-    <pre>{{ slide_group | inspect}}</pre>
+    <pre>{{ slides | inspect}}</pre>
     
-    {% for slide in slide_group | split: "<hr />" %}
+    {% for slide in slides  %}
         <article class="slide" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
         </article>
