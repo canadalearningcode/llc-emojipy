@@ -81,7 +81,11 @@ nav.page-nav > ul li {
     display:flex;
 }
 
-.slide-group:has(:target) ~ .slide-group {
+:where( 
+    .slide-group:has(:target), 
+    #slide-content:not(:has(:target)) .slide-group:first-of-type,
+    .slide-group:target ) 
+    ~ .slide-group {
     translate: 300vh;
 }
 
@@ -89,7 +93,7 @@ nav.page-nav > ul li {
     translate: -300vh;
 }
 
-.slide-group:has(:target), #slide-content:not(:has(:target)) .slide-group:first-of-type {
+.slide-group:has(:target), #slide-content:not(:has(:target)) .slide-group:first-of-type, .slide-group:target {
     translate: calc(var(--toc-width) * -1 - 1rem) ;
     position:relative;
 }
@@ -102,6 +106,7 @@ nav.page-nav > ul li {
     translate: calc(var(--toc-width) * -1 - 1rem) ;
     gap:1rem;
     transition: translate .5s;
+    background-color: white;
 }
 
 .slide-container {
