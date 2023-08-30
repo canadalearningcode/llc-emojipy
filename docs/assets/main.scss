@@ -115,9 +115,9 @@ nav.page-nav > ul li {
 }
 
 .slide-group {
-    position:absolute;
+    // position:absolute;
     display:grid;
-    grid-template-columns: var(--toc-width) var(--slide-width) auto;
+    grid-template-columns: auto var(--slide-width) auto;
     grid-template-areas: "a b c";
 
     translate: calc(var(--toc-width) * -1 - 1rem) ;
