@@ -10,15 +10,17 @@
     {%- include slide_view_header.html -%}
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        
-        <nav class="slide-group-nav" id="{{ page.slide_group_name | slugify }}-nav">
-            {% for slidegroup in site.slides %}
-                {% assign toc_id = slidegroup.slide_group_name | append: "-toc" %}
-                {% include toc.html html=slidegroup.content sanitize=true class="inline_toc" id="toc_id" h_min=2 h_max=2 %}
-            {% endfor %}
-        </nav>
+        <div class="slides-view-container">
+            <nav class="slides-nav" id="slides-nav">
+                {% for slidegroup in site.slides %}
+                    {% assign toc_id = slidegroup.slide_group_name | append: "-toc" %}
+                    {% include toc.html html=slidegroup.content sanitize=true class="inline_toc" id="toc_id" h_min=2 h_max=2 %}
+                {% endfor %}
+            </nav>
         
         {{ content }}
+
+        </div>
       </div>
     </main>
 

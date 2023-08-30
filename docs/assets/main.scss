@@ -40,24 +40,27 @@ hr {
     background-color: white;
 }
 
+.slides-view-container {
+    display:grid;
+    grid-template-columns: calc(var(--toc-width) - 1rem) 30rem ;
+}
+
 .page-content {
     // overflow:hidden;
 }
 
-nav:is(.page-nav, .slide-group-nav) > ul {
+nav:is(
+    .page-nav, 
+    .slide-group-nav,
+    .slides-nav) > ul {
     
     position:sticky;
-    // right:100%;
-    // top:1rem;
     top:0;
 
     width:max-content;
     max-width:calc(var(--toc-width) - 1rem);
-    // padding:1rem;   
     margin-left:0;
-    // margin-right:2.5rem;
 
-    // border-right:1px solid #ddd;
     background-color: var(--page-nav-background-color);
     list-style:none;
     
