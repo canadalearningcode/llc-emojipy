@@ -11,12 +11,13 @@
 :root {
     --page-nav-background-color: white;
     --toc-width:15rem;
-    --slide-width:45rem;
+    --slide-width:100vw;
     --slide-padding:3rem;
 }
 
 html {
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
+    scroll-padding-top:var(--slide-padding);
 }
 
 body {
@@ -131,7 +132,6 @@ nav.page-nav > ul li {
 
 .slide-container {
     display:grid;
-    gap:1rem;
     grid-area: b;
 }
 
@@ -140,10 +140,12 @@ nav.page-nav > ul li {
     // height:100vh;
     // min-height:600px;
     // border:1px solid #ddd;
-    min-height: calc(100vh - 2rem - 2 * var(--slide-padding));
+    height:fit-content;
+    min-height: calc(100vh - 2rem);
     width: calc(100vw - var(--toc-width) - 2rem - 2 * var(--slide-padding));
     background-color:grey;
     overflow-y: auto;
+ 
 }
 
 .slide aside {
