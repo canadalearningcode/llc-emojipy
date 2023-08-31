@@ -60,7 +60,7 @@ hr {
 .post-content:has(.page-nav #markdown-toc) {
     display:grid;
     grid-template-areas:"nav main";
-    grid-template-columns:var(--toc-width) auto;
+    grid-template-columns:var(--toc-width) minmax(0,auto); // by default, min-width is auto!
     gap:1rem;
     
 }
@@ -69,6 +69,7 @@ nav.page-nav {
     position:sticky;
     grid-area:nav;
     align-self: start;
+    top:1rem;
 }
 
 .post-content:has(.page-nav #markdown-toc) .content-container {
