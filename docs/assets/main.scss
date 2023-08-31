@@ -144,8 +144,28 @@ nav.page-nav > ul li {
     min-height: calc(100vh - 2rem);
     width: calc(100vw - var(--toc-width) - 2rem - 2 * var(--slide-padding));
     background-color:grey;
-    overflow-y: auto;
+    // overflow-y: auto;
  
+}
+
+.slide.basic {
+    display:grid;
+    grid-template-areas:
+    "header"
+    "body"
+    "footer"
+    ;
+}
+
+.slide.basic h2 {
+    grid-area:header;
+}
+.slide.basic h2 ~ * {
+    grid-area:body;
+}
+
+.slide.basic footer {
+    grid-area:footer;
 }
 
 .slide aside {

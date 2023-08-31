@@ -8,14 +8,14 @@
     {% comment %}
     <nav class="slide-group-nav" id="{{ page.slide_group_name | slugify }}-nav">
         {% assign toc_id = page.slide_group_name | append: "-toc" %}
-        {% include toc.html html=content sanitize=true class="inline_toc" id="toc_id" h_min=2 h_max=2 %}
+        {% include toc.html html=content sanitize=true class="inline_toc" id=toc_id h_min=2 h_max=2 %}
     </nav>
     {% endcomment %}
 
     <section class="slide-container">
     {% for slide in slides  %}
-        
-        <article class="slide" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
+        {% assign slide_layout = "basic" %}
+        <article class="slide {{ slide_layout }}" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
 
             <footer class="slide-controls">
