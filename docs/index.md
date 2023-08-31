@@ -13,10 +13,12 @@ layout: slide_view
 
 </section>
 
+{% comment %}
 <section id="slide-navigation">
 <ul>
 {% for slide in site.slides %}
     <li><a href="#{{ slide.slide_group_name | slugify }}">{{ slide.slide_group_name }}</a></li>
 {% endfor %}
+{% endcomment %}
 </ul>
 </section>

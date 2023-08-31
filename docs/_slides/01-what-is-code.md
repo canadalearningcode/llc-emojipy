@@ -3,13 +3,6 @@ slide_group_name: What is code?
 layout: slide_group
 ---
 
-{% capture slide_toc %}
-
-* Toc
-{:toc}
-
-{% endcapture %}
-
 ## Code is...
 
 A set of instructions that tell a computer what to do.

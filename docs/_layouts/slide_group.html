@@ -14,6 +14,7 @@
         {% assign toc_id = page.slide_group_name | append: "-toc" %}
         {% include toc.html html=content sanitize=true class="inline_toc" id="toc_id" h_min=2 h_max=2 %}
     </nav>
+    {% endcomment %}
 
     <section class="slide-container">
     {% for slide in slides  %}
@@ -21,8 +22,7 @@
             {{ slide }}
         </article>
     {% endfor %}
-    </section>
-    {% endcomment %}
+    </section>   
 </section>
 
 

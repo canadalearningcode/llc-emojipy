@@ -3,13 +3,6 @@ slide_group_name: Front matter
 layout: slide_group
 ---
 
-{% capture slide_toc %}
-
-* Toc
-{:toc}
-
-{% endcapture %}
-
 ## Welcome
 
 ### Emoji Art with Python and Processing
