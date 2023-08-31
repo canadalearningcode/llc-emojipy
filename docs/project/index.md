@@ -2,7 +2,7 @@
 title: "Outline & Delivery Notes"
 ---
 
-{::options toc_levels="1..3" /}
+{::options toc_levels="2..3" /}
 
 <nav class="page-nav" markdown="1">
 
@@ -10,6 +10,7 @@ title: "Outline & Delivery Notes"
 {:toc}
 
 </nav>
+<section class="content-container" markdown="1">
 
 _Jump to [stretch/extension concepts](#stretch-concepts)_
 
@@ -217,3 +218,5 @@ _Be sure to communicate to learners that additional information and reference ma
       fill(0) # black, for the pupil
       circle(x, y, 25, 25)
    ```
+
+   </section>
