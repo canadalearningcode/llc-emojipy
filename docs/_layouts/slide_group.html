@@ -4,10 +4,6 @@
 {% assign slide_group = content | split: "</nav>" | last %}
 {% assign slides = page.content | split: "<hr />" %}
 
-{% comment %}
-{% assign slide_nav = content | split: "</nav>" | first | append: "</nav>" %}
-    {{ slide_nav }}
-{% endcomment %}
 <section class="slide-group" id="{{ page.slide_group_name | slugify }}" >
     {% comment %}
     <nav class="slide-group-nav" id="{{ page.slide_group_name | slugify }}-nav">
