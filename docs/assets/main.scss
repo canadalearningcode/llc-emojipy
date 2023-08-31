@@ -62,12 +62,13 @@ hr {
     grid-template-areas:"nav main";
     grid-template-columns:var(--toc-width) auto;
     gap:1rem;
-    align-items: start;
+    
 }
 
 nav.page-nav {
     position:sticky;
     grid-area:nav;
+    align-self: start;
 }
 
 .post-content:has(.page-nav #markdown-toc) *:not(nav) {
