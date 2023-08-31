@@ -117,10 +117,10 @@ nav.page-nav > ul li {
 .slide-group {
     // position:absolute;
     display:grid;
-    grid-template-columns: auto var(--slide-width) auto;
+    grid-template-columns: min-content var(--slide-width) auto;
     grid-template-areas: "a b c";
 
-    translate: calc(var(--toc-width) * -1 - 1rem) ;
+    // translate: calc(var(--toc-width) * -1 - 1rem) ;
     gap:1rem;
     // transition: translate .5s;
     background-color: white;
@@ -129,7 +129,7 @@ nav.page-nav > ul li {
 .slide-container {
     display:grid;
     gap:1rem;
-    grid-area:"b";
+    grid-area: b;
 }
 
 .slide {
