@@ -12,12 +12,14 @@
     --page-nav-background-color: white;
     --toc-width:15rem;
     --slide-width:100vw;
+    
     --slide-padding:3rem;
+    --slide-padding-top:calc(var(--slide-padding) - .75rem);
 }
 
 html {
     // scroll-behavior: smooth;
-    scroll-padding-top:var(--slide-padding);
+    scroll-padding-top:var(--slide-padding-top);
 }
 
 body {
@@ -137,6 +139,7 @@ nav.page-nav > ul li {
 
 .slide {
     padding:var(--slide-padding);
+    padding-top:var(--slide-padding-top);
     // height:100vh;
     // min-height:600px;
     // border:1px solid #ddd;
@@ -166,6 +169,17 @@ nav.page-nav > ul li {
 
 .slide.basic footer {
     grid-area:footer;
+}
+
+.slide-footer {
+    display:flex
+}
+
+.slide-controls {
+    padding: 1rem;
+    background-color:white;
+    justify-self: center;
+    align-self: center;
 }
 
 .slide aside {

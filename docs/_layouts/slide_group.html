@@ -18,7 +18,8 @@
         <article class="slide {{ slide_layout }}" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
             {{ slide }}
 
-            <footer class="slide-controls">
+            <footer class="slide-footer">
+                <div class="slide-controls">
                 {% assign next_slide_id = slides[forloop.index] | split: "</h2>" | first | split: ">" | slice: 1 | first | slugify %} 
                 {% unless forloop.first %}
                     <a href="#{{ prev_slide_id }}">&larr;</a>
@@ -28,6 +29,7 @@
                     <a href="#{{ next_slide_id }}">&rarr;</a>
                     {% assign prev_slide_id = slide | split: "</h2>" | first | split: ">" | slice: 1 | first | slugify %}
                 {% endunless %}
+                </div>
             </footer>
         </article>
 
