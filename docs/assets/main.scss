@@ -12,6 +12,7 @@
     --page-nav-background-color: white;
     --toc-width:15rem;
     --slide-width:45rem;
+    --slide-padding:3rem;
 }
 
 html {
@@ -92,7 +93,7 @@ nav.page-nav > ul li {
 
 
 #slide-content {
-    font-size:1.3rem;
+    font-size:2.5rem;
     display:flex;
 }
 
@@ -137,10 +138,12 @@ nav.page-nav > ul li {
 }
 
 .slide {
-    padding:1rem;
+    padding:var(--slide-padding);
     // height:100vh;
     // min-height:600px;
     border:1px solid #ddd;
+    height: calc(100vh - 2rem);
+    width: calc(100vw - var(--toc-width) - 2rem - 2 * var(--slide-padding));
 }
 
 .slide aside {
