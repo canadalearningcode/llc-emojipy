@@ -10,7 +10,7 @@
     {%- include slide_view_header.html -%}
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="slides-view-container">
+        <div class="slides-view-container menu-open">
             <nav class="slides-nav" id="slides-nav">
                 {% for slidegroup in site.slides %}
                     {% assign toc_id = slidegroup.slide_group_name | append: "-toc" %}

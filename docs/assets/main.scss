@@ -50,6 +50,11 @@ hr {
 
 .slides-view-container {
     display:grid;
+    grid-template-columns: 0 auto ;
+}
+
+.slides-view-container.menu-open {
+    display:grid;
     grid-template-columns: calc(var(--toc-width) - 1rem) 30rem ;
 }
 
@@ -160,14 +165,11 @@ nav.page-nav > ul li {
 .slide {
     padding:var(--slide-padding);
     padding-top:var(--slide-padding-top);
-    // height:100vh;
-    // min-height:600px;
-    // border:1px solid #ddd;
+
     height:fit-content;
     min-height: calc(100vh - 2rem);
     width: calc(100vw - var(--toc-width) - 2rem - 2 * var(--slide-padding));
     background-color:grey;
-    // overflow-y: auto;
  
 }
 

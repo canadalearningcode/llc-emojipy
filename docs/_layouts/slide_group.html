@@ -12,7 +12,7 @@
     </nav>
     {% endcomment %}
 
-    <section class="slide-container">
+    <div class="slide-container">
     {% for slide in slides  %}
         {% assign slide_layout = "basic" %}
         <article class="slide {{ slide_layout }}" id="{{ page.slide_group_name | slugify }}-{{ forloop.index }}">
@@ -35,7 +35,7 @@
 
         
     {% endfor %}
-    </section>   
+    </div>   
 </section>
 
 
