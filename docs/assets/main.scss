@@ -46,6 +46,7 @@ hr {
 
 .page-content > .wrapper {
     background-color: white;
+    max-width: calc(1000px - (4rem));
 }
 
 .slides-view-container {
