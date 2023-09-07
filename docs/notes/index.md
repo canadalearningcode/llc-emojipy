@@ -167,7 +167,8 @@ _Jump to [stretch/extension concepts](#stretch-milestones)_
 
 ---
 
-## Stretch Milestones {: #stretch}
+## Stretch Milestones
+{: #stretch}
 
 ### Facilitation note(s)
 
