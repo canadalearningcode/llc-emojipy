@@ -12,9 +12,9 @@ title: "Delivery Notes"
 </nav>
 <section class="content-container" markdown="1">
 
-_Jump to [stretch/extension concepts](#stretch-concepts)_
+## Delivery Notes
 
-## Flexible facilitation note
+### Flexible facilitation
 
 Instead of using the provided slide deck the entire time, you may instead switch to following this project outline at a designated point in the experience. It is your responsibiliy to ensure that **each item in a section's checklist** has been completed or addressed before moving on. 
 
@@ -22,7 +22,26 @@ Failure to complete a section's checklist may result in a confusing experience f
 
 _Be sure to communicate to learners that additional information and reference material can be found in the slide deck._
 
+### Trinket's Processing vs Python mode for Processing
+
+Trinket uses [Skulpt](https://skulpt.org/) for its Python environment:
+
+1. Skulpt is a fully client-side, browser-based Python environment requiring no server-side support or plugins, written in JavaScript.
+2. Trinket is _not_ running Python mode for Processing, so the [Processing Python reference (https://py.processing.org/reference/)](https://py.processing.org/reference/), while handy, won't be fully accurate.
+3. The version of Processing that's being used by Trinket is (AFAIK) a partial port of the now-defunct JavaScript port of Processing, ProcessingJS. This means that Trinket's Processing doesn't have full coverage of the Processing API: it is a subset of ProcessingJS's coverage, which itself was a work-in-progress when development on it stopped.
+
+### Known Issues and Oddities
+
+1. If learners want to be able to save their work, they should create an account and log in before starting. Account creation doesn't required a verified email, so they can potentially create dummy accounts as long as they don't ever forget their password!
+1. Trinket **requires** a `run()` call to start the Processing sketch. Do not forget this!
+1. There is only one version of the `arc()` method, so you can't close the arc using the `mode` parameter to, for example, draw an outline around the semi-ellipse mouth of an emoji. As a workaround, wrap `arc()` in `beginShape()` and `endShape(CLOSE)` (`endShape(CHORD)` also seems to work) if you want the stroke on your `arc()` to be closed.
+1. Using `save()` and `saveFrame()` to export images likely won't work. Take screenshots to save images of created work or (the code will be saved to Trinket).
+1. While the starter project adds everything from the `processing` module into the global namespace, you might want to demonstrate what methods belong to the `processing` module by doing `import processing` and then using it as, e.g., `processing.background(300)`. This will behave as expected for most methods, though be aware that `setup()` and `draw()` aren't part of `processing`, but `processing.run()` is. 
+1. `processing.pushStyle()` and `processing.popStyle()` can't be used (`processing.popStyle()` raises an error) unless added to the global namespace.
+
 ## Sections
+
+_Jump to [stretch/extension concepts](#stretch-milestones)_
 
 ### Introduction, Context, and Setup
 
@@ -38,6 +57,7 @@ _Be sure to communicate to learners that additional information and reference ma
 - **Exercises 0 and 1:** Use the provided "Getting Started" Trinket to have learners make small modifications to the code, particularly moving elements around.
 - Introduce learners to the structure of a Processing sketch.
 - Have learners make use of the Processing reference.
+- [Processing Python reference (https://py.processing.org/reference/)](https://py.processing.org/reference/). **Important note:** The version of Processing that Trinket uses is _not_ 1:1 with the Python mode of Processing described in the reference. Some things _will not work_ or may be different (e.g., `circle()` exists in Python mode, but not in the Trinket environment).
 
 #### Checklist
 
@@ -147,7 +167,7 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ---
 
-## Stretch Milestones
+## Stretch Milestones {: #stretch}
 
 ### Facilitation note(s)
 
