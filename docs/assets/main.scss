@@ -34,6 +34,10 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
+:is(h1, h2, h3) code {
+    text-transform:initial;
+}
+
 h1, h3 {
     margin-top:2rem;
     font-weight:bold;
