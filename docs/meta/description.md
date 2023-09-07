@@ -1,5 +1,6 @@
 ---
 title: Workshop Description
+permalink: /description/
 ---
 
 
