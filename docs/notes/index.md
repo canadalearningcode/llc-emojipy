@@ -1,5 +1,5 @@
 ---
-title: "Outline & Delivery Notes"
+title: "Delivery Notes"
 ---
 
 {::options toc_levels="2..3" /}
@@ -14,7 +14,7 @@ title: "Outline & Delivery Notes"
 
 _Jump to [stretch/extension concepts](#stretch-concepts)_
 
-## Flexible delivery note
+## Flexible facilitation note
 
 Instead of using the provided slide deck the entire time, you may instead switch to following this project outline at a designated point in the experience. It is your responsibiliy to ensure that **each item in a section's checklist** has been completed or addressed before moving on. 
 
@@ -147,11 +147,66 @@ _Be sure to communicate to learners that additional information and reference ma
 
 ---
 
-## Stretch Concepts
+## Stretch Milestones
 
-### Processing
+### Facilitation note(s)
 
-2. **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
+1. **Concept groups.** Stretch concepts (i.e., additional concepts that can be covered) have been grouped into "milestones", since a single concept rarely makes sense by itself.
+2. **Milestone order**. While each milestone is more-or-less independent of the rest, they have been ordered in terms of approximate importance as foundational Python concepts, keeping in mind that they need to be applied in the current experience context (Processing).
+1. **Distinguishing between Python and Processing.** Before continuing onto the stretch milestones, reinforce the difference between Python and Processing. For the milestones below, be clear about what is a built-in or standard feature afforded by the Python language and what is a feature provided by Processing. For better or for worse, processing exposes a lot of helper/utility functions that would normally be found in modules such as `math` and `random`.
+
+
+### Milestone A: Variables, math operators, lists & `random`
+
+1. **Variables and math operators.** Make code easier to maintain (color, position, size, etc.) or add motion; use flags to have states persist (will likely require use of `global`). Assign values using `=`. Perform simple math using `-` and `+`. Example: use variables to be able to draw relative to a point (instead of relative to the corner/origin). Potentially combine with Processing's `mouseX` and `mouseY` variables to create something that follows the mouse cursor
+
+   ```python
+    def draw():
+      x = 150
+      y = 200
+
+      # draw a head (ellipse) at the coordinates
+      ellipse(x, y, 150, 150)
+
+      # draw two eyeballs (ellipses) offset from the coordinates
+      ellipse(x - 30, y - 20, 50, 50)
+      ellipse(x + 30, y + 20, 50, 50)
+    
+   ```
+
+2. **`import random`.** Use the `random` module and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection. Note: without importing Python's `random` module, Processing exposes a `random(a,b)` method that functions like `random.uniform(a,b)` (i.e., produces a float between `a` and `b`). If you _don't_ end up importing the `random` module, you can mimic the functionality of `random.randint(a,b)` with `round(random(a,b))`.
+
+   ```python
+    import random
+
+    def setup():
+      size(300,300)
+      background(35, 78, random.randint(128, 255))
+   ```
+
+3. **Lists `[]` and `random.choice()`.** Pick a value from a set of values.
+
+
+### Milestone B: Custom functions
+
+1. `def` new functions to make code more scalable, e.g., a new "eye" function that creates an eye at a particular location. Can further elaborate on this by adding parameters for eye color, size, etc.
+
+   ```python
+    def draw():
+      # ... draw code ...#
+      drawEye(125,150) # left eye
+      drawEye(175,150) # right eye
+
+    def drawEye(x, y):
+      fill(255) # white, for the eye ball part
+      circle(x, y, 50, 50)
+      fill(0) # black, for the pupil
+      circle(x, y, 25, 25)
+   ```
+
+### Milestone C: Conditional statements, operators, and Processing variables
+
+**The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
 
    ```python
     if keyPressed: 
@@ -187,36 +242,13 @@ _Be sure to communicate to learners that additional information and reference ma
       winking = ~winking # toggle boolean using the not ~ operator 
    ```
 
+### Milestone D: Processing style contexts
+
+1. `pushStyle()` and `popStyle()`: `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was. (Prompt: Where/why might this be useful?)
+2. Use `pushStyle()` and `popStyle()` inside a function.
+3. Closing an `arc()` using `beginShape()` and `endShape(CLOSE)` (or `endShape(CHORD)`).
 4. Strokes (`stroke()`, `noStroke()`, `strokeWeight()`) and fills (`fill()`, `noFill()`).
-1. **Managing styles with `pushStyle()` and `popStyle()`.** `pushStyle()` essentially creates a local style block or context and `popStyle()` exits, revert to whatever the previous style context was.
 
-### Python 
 
-1. **`import random`.** Use the `random` library and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection.
-
-   ```python
-    import random
-
-    def setup():
-      size(300,300)
-      background(35, 78, random.randint(128, 255))
-   ```
-
-2. **Lists `[]` and `random.choice()`.** Pick a value from a set of values.
-3. **Variables.** Make code easier to maintain (color, position, size, etc.) or add motion; use flags to have states persist (will likely require use of `global`)
-4. **Custom functions.** `def` new functions to make code more scalable, e.g., a new "eye" function that creates an eye at a particular location. Can further elaborate on this by adding parameters for eye color, size, etc.
-
-   ```python
-    def draw():
-      # ... draw code ...#
-      drawEye(125,150) # left eye
-      drawEye(175,150) # right eye
-
-    def drawEye(x, y):
-      fill(255) # white, for the eye ball part
-      circle(x, y, 50, 50)
-      fill(0) # black, for the pupil
-      circle(x, y, 25, 25)
-   ```
 
 </section>
