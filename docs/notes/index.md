@@ -41,7 +41,7 @@ Trinket uses [Skulpt](https://skulpt.org/) for its Python environment:
 
 ## Sections
 
-_Jump to [stretch/extension concepts](#stretch-milestones)_
+_Jump to [stretch/extension concepts](#stretch)_
 
 ### Introduction, Context, and Setup
 
