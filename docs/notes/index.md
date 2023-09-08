@@ -180,7 +180,7 @@ _Jump to [stretch/extension concepts](#stretch)_
 
 ### Milestone A: Variables, math operators, lists & `random`
 
-1. **Variables and math operators.** Make code easier to maintain (color, position, size, etc.) or add motion; use flags to have states persist (will likely require use of `global`). Assign values using `=`. Perform simple math using `-` and `+`. Example: use variables to be able to draw relative to a point (instead of relative to the corner/origin). Potentially combine with Processing's `mouseX` and `mouseY` variables to create something that follows the mouse cursor
+* **Variables and math operators.** Make code easier to maintain (color, position, size, etc.) or add motion; use flags to have states persist (will likely require use of `global`). Assign values using `=`. Perform simple math using `-` and `+`. Example: use variables to be able to draw relative to a point (instead of relative to the corner/origin). Potentially combine with Processing's `mouseX` and `mouseY` variables to create something that follows the mouse cursor
 
    ```python
     def draw():
@@ -196,7 +196,7 @@ _Jump to [stretch/extension concepts](#stretch)_
     
    ```
 
-2. **`import random`.** Use the `random` module and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection. Note: without importing Python's `random` module, Processing exposes a `random(a,b)` method that functions like `random.uniform(a,b)` (i.e., produces a float between `a` and `b`). If you _don't_ end up importing the `random` module, you can mimic the functionality of `random.randint(a,b)` with `round(random(a,b))`.
+* **`import random`.** Use the `random` module and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection. Note: without importing Python's `random` module, Processing exposes a `random(a,b)` method that functions like `random.uniform(a,b)` (i.e., produces a float between `a` and `b`). If you _don't_ end up importing the `random` module, you can mimic the functionality of `random.randint(a,b)` with `round(random(a,b))`.
 
    ```python
     import random
@@ -206,12 +206,12 @@ _Jump to [stretch/extension concepts](#stretch)_
       background(35, 78, random.randint(128, 255))
    ```
 
-3. **Lists `[]` and `random.choice()`.** Pick a value from a set of values.
+* **Lists `[]` and `random.choice()`.** Pick a value from a set of values.
 
 
 ### Milestone B: Custom functions
 
-1. `def` new functions to make code more scalable, e.g., a new "eye" function that creates an eye at a particular location. Can further elaborate on this by adding parameters for eye color, size, etc.
+`def` new functions to make code more scalable, e.g., a new "eye" function that creates an eye at a particular location. Can further elaborate on this by adding parameters for eye color, size, etc.
 
    ```python
     def draw():
@@ -239,7 +239,7 @@ _Jump to [stretch/extension concepts](#stretch)_
         arc(width/2, 200, 100, 150, 0, radians(180))
    ```
 
-   This can get a little janky since you can only get the _last_ key that's been pressed, i.e., it won't detect multiple keys being pressed at the same time. You _can_ keep track of this yourself, e.g., by maintaining a list of keys that have been pressed and not released, but that's likely too advanced. It is included below for your reference.
+This can get a little janky since you can only get the _last_ key that's been pressed, i.e., it won't detect multiple keys being pressed at the same time. You _can_ keep track of this yourself, e.g., by maintaining a list of keys that have been pressed and not released, but that's likely too advanced. It is included below for your reference.
 
    ```python
     keysPressed = [] # create an empty list
@@ -255,13 +255,13 @@ _Jump to [stretch/extension concepts](#stretch)_
         keysPressed.remove(key)
    ```
 
-3. `def keyReleased()`. Fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
+`def keyReleased()` fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
 
    ```python
     def keyReleased():
-    global winking # variable is True if the emoji should be winking and False otherwise
-    if key == "w":
-      winking = ~winking # toggle boolean using the not ~ operator 
+      global winking # variable is True if the emoji should be winking and False otherwise
+      if key == "w":
+        winking = ~winking # toggle boolean using the not ~ operator 
    ```
 
 ### Milestone D: Processing style contexts
