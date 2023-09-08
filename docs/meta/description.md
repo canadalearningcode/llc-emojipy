@@ -22,7 +22,7 @@ From machine learning, to web development, to art, to automation, Python's popul
 
 ## Learning objectives
 
-{{ site.pages["slides"] | inspect }}
+{{ site.pages | where: "path", "/notes/" | inspect }}
 
 
 ## Prerequisites
