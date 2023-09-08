@@ -20,15 +20,15 @@ permalink: /notes/
 
 ### Quick Links
 
-* **Slides (Google Slides):** [https://bit.ly/llc-emojipy]
-* **Notes:** [{{ page.url }}]
-* **Description:** [{{ description.url }}]
+* **Slides (Google Slides):** [https://bit.ly/llc-emojipy](https://bit.ly/llc-emojipy)
+* **Notes (GitHub Pages):** [{{ page.url | absolute_url }}]({{ page.url }})
+* **Description (GitHub Pages):** [{{ description.url | absolute_url }}]({{ description.url }})
 
 #### Trinket
-* **Trinket:** [https://trinket.io]
-* **Demo/Finished Project (Trinket):** [https://bit.ly/clc-emojipy-demo]
-* **Warm-up Sketch (Trinket):** [https://bit.ly/clc-emojipy-warmup]
-* **Starter Project/Sketch (Trinket):** [https://bit.ly/clc-emojipy-starter]
+* **Trinket:** [https://trinket.io](https://trinket.io)
+* **Demo/Finished Project (Trinket):** [https://bit.ly/clc-emojipy-demo](https://bit.ly/clc-emojipy-demo)
+* **Warm-up Sketch (Trinket):** [https://bit.ly/clc-emojipy-warmup](https://bit.ly/clc-emojipy-warmup)
+* **Starter Project/Sketch (Trinket):** [https://bit.ly/clc-emojipy-starter](https://bit.ly/clc-emojipy-starter)
 
 ### Flexible facilitation
 
