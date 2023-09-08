@@ -1,5 +1,6 @@
 ---
 title: "Delivery Notes"
+permalink: /notes/
 ---
 
 {::options toc_levels="2..3" /}
