@@ -20,8 +20,8 @@ permalink: /notes/
 ### Quick Links
 
 * **Slides (Google Slides):** [https://bit.ly/llc-emojipy](https://bit.ly/llc-emojipy)
-* **Notes (GitHub Pages):** [{{ page.url | absolute_url }}]({{ page.url }})
-* **Description (GitHub Pages):** [{{ description.url | absolute_url }}]({{ description.url }})
+* **Notes (GitHub Pages):** [{{ page.url | absolute_url }}]({{ page.url | relative_url }})
+* **Description (GitHub Pages):** [{{ description.url | absolute_url }}]({{ description.url | relative_url }})
 
 #### Trinket
 * **Trinket:** [https://trinket.io](https://trinket.io)
