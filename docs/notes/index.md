@@ -5,8 +5,7 @@ permalink: /notes/
 
 {::options toc_levels="2..3" /}
 
-{% assign notes = site.pages | where: "permalink", "/notes/" %}
-{% assign description = site.pages | where: "permalink", "/description/" %}
+{% assign description = site.pages | where: "path", "/meta/description.md" %}
 
 <nav class="page-nav" markdown="1">
 

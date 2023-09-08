@@ -8,9 +8,9 @@ permalink: /description/
 
 **Emoji Art with Python and Processing**
 
-{% assign notes = site.pages | where: "permalink", "/notes/" %}
+{% assign notes = site.pages | where: "path", "/notes/index.md" %}
 
-_Go to [delivery notes]("{{ notes.url }}")_
+_Go to [delivery notes]({{ notes.url }})_
 
 Emojis are a popular way to add additional meaning to text messages. Because they are often displayed as tiny images, the design of an emoji needs to be clear and relatively simple to be able to be effectively used. This means that many of them can be created out of a few simple, but purposeful, shapes. The Processing graphics library for Python provides us with an easy (and free!) way to get started creating images out of simple shapes.
 
