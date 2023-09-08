@@ -8,7 +8,7 @@ permalink: /description/
 
 **Emoji Art with Python and Processing**
 
-{% assign notes = site.pages | where: "path", "/notes/index.md" %}
+{% assign notes = site.pages | where: "permalink", "/notes/" | first %}
 
 _Go to [delivery notes]({{ notes.url }})_
 
