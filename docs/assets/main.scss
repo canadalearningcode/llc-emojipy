@@ -37,10 +37,11 @@ h1, h2, h3 {
 
 :is(h1, h2, h3) code {
     text-transform:initial;
+    font-size:inherit;
 }
 
 h1, h3 {
-    margin-top:2rem;
+    margin-top:1.5rem;
     font-weight:bold;
 }
 
@@ -50,8 +51,11 @@ hr {
 }
 
 .page-content > .wrapper {
-    background-color: white;
-    
+    background-color: white;  
+}
+
+.content-container :is(ol, ul) li {
+    margin-bottom: .5rem;
 }
 
 .wrapper {

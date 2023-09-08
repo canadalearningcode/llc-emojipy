@@ -175,7 +175,7 @@ _Jump to [stretch/extension concepts](#stretch)_
 
 1. **Concept groups.** Stretch concepts (i.e., additional concepts that can be covered) have been grouped into "milestones", since a single concept rarely makes sense by itself.
 2. **Milestone order**. While each milestone is more-or-less independent of the rest, they have been ordered in terms of approximate importance as foundational Python concepts, keeping in mind that they need to be applied in the current experience context (Processing).
-1. **Distinguishing between Python and Processing.** Before continuing onto the stretch milestones, reinforce the difference between Python and Processing. For the milestones below, be clear about what is a built-in or standard feature afforded by the Python language and what is a feature provided by Processing. For better or for worse, processing exposes a lot of helper/utility functions that would normally be found in modules such as `math` and `random`.
+1. **Distinguishing between Python and Processing.** Before continuing onto the stretch milestones, reinforce the difference between Python and Processing. For the milestones below, be clear about what is a built-in or standard feature afforded by the Python language and what is a feature provided by Processing. For better or for worse, Processing exposes a lot of helper/utility functions that would normally be found in standard modules such as `math` and `random`.
 
 
 ### Milestone A: Variables, math operators, lists & `random`
@@ -183,27 +183,27 @@ _Jump to [stretch/extension concepts](#stretch)_
 * **Variables and math operators.** Make code easier to maintain (color, position, size, etc.) or add motion; use flags to have states persist (will likely require use of `global`). Assign values using `=`. Perform simple math using `-` and `+`. Example: use variables to be able to draw relative to a point (instead of relative to the corner/origin). Potentially combine with Processing's `mouseX` and `mouseY` variables to create something that follows the mouse cursor
 
    ```python
-    def draw():
-      x = 150
-      y = 200
+  def draw():
+    x = 150
+    y = 200
 
-      # draw a head (ellipse) at the coordinates
-      ellipse(x, y, 150, 150)
+    # draw a head (ellipse) at the coordinates
+    ellipse(x, y, 150, 150)
 
-      # draw two eyeballs (ellipses) offset from the coordinates
-      ellipse(x - 30, y - 20, 50, 50)
-      ellipse(x + 30, y + 20, 50, 50)
+    # draw two eyeballs (ellipses) offset from the coordinates
+    ellipse(x - 30, y - 20, 50, 50)
+    ellipse(x + 30, y + 20, 50, 50)
     
    ```
 
 * **`import random`.** Use the `random` module and `random.randint()` to create, e.g., random colors. Can potentially pair this with key press detection. Note: without importing Python's `random` module, Processing exposes a `random(a,b)` method that functions like `random.uniform(a,b)` (i.e., produces a float between `a` and `b`). If you _don't_ end up importing the `random` module, you can mimic the functionality of `random.randint(a,b)` with `round(random(a,b))`.
 
    ```python
-    import random
+  import random
 
-    def setup():
-      size(300,300)
-      background(35, 78, random.randint(128, 255))
+  def setup():
+    size(300,300)
+    background(35, 78, random.randint(128, 255))
    ```
 
 * **Lists `[]` and `random.choice()`.** Pick a value from a set of values.
@@ -213,56 +213,59 @@ _Jump to [stretch/extension concepts](#stretch)_
 
 `def` new functions to make code more scalable, e.g., a new "eye" function that creates an eye at a particular location. Can further elaborate on this by adding parameters for eye color, size, etc.
 
-   ```python
-    def draw():
-      # ... draw code ...#
-      drawEye(125,150) # left eye
-      drawEye(175,150) # right eye
+```python
+def draw():
+  # ... draw code ...#
+  drawEye(125,150) # left eye
+  drawEye(175,150) # right eye
 
-    def drawEye(x, y):
-      fill(255) # white, for the eye ball part
-      circle(x, y, 50, 50)
-      fill(0) # black, for the pupil
-      circle(x, y, 25, 25)
-   ```
+def circle(x, y, r):
+  ellipse(x, y, r, r)
+
+def drawEye(x, y):
+  fill(255) # white, for the eye ball part
+  circle(x, y, 50)
+  fill(0) # black, for the pupil
+  circle(x, y, 25)
+```
 
 ### Milestone C: Conditional statements, operators, and Processing variables
 
 **The `key` Processing variable and `and` or nested `if`.** Processing's `key` variable contains the character of the key that was last pressed, e.g., when the "t" key is pressed, `key == "t"`.
 
-   ```python
-    if keyPressed: 
-      # check if the "t" key is pressed
-      if key == "t": 
-        # stick out the tongue
-        fill(198,75,80)
-        arc(width/2, 200, 100, 150, 0, radians(180))
-   ```
+```python
+if keyPressed: 
+# check if the "t" key is pressed
+  if key == "t": 
+    # stick out the tongue
+    fill(198,75,80)
+    arc(width/2, 200, 100, 150, 0, radians(180))
+```
 
 This can get a little janky since you can only get the _last_ key that's been pressed, i.e., it won't detect multiple keys being pressed at the same time. You _can_ keep track of this yourself, e.g., by maintaining a list of keys that have been pressed and not released, but that's likely too advanced. It is included below for your reference.
 
-   ```python
-    keysPressed = [] # create an empty list
+```python
+keysPressed = [] # create an empty list
 
-    def keyPressed():
-      global keysPressed
-      if key not in keysPressed:
-        keysPressed.append(key)
+def keyPressed():
+  global keysPressed
+  if key not in keysPressed:
+    keysPressed.append(key)
 
-    def keyReleased():
-      global keysPressed
-      if key in keysPressed:
-        keysPressed.remove(key)
-   ```
+def keyReleased():
+  global keysPressed
+  if key in keysPressed:
+    keysPressed.remove(key)
+```
 
 `def keyReleased()` fires when a key is released, once per keystroke. Similar to `def keyPressed()`, though that can repeat if a key is held down which might be undesireable.
 
-   ```python
-    def keyReleased():
-      global winking # variable is True if the emoji should be winking and False otherwise
-      if key == "w":
-        winking = ~winking # toggle boolean using the not ~ operator 
-   ```
+```python
+def keyReleased():
+  global winking # variable is True if the emoji should be winking and False otherwise
+  if key == "w":
+    winking = ~winking # toggle boolean using the not ~ operator 
+```
 
 ### Milestone D: Processing style contexts
 
