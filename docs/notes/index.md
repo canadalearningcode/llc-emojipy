@@ -5,6 +5,9 @@ permalink: /notes/
 
 {::options toc_levels="2..3" /}
 
+{% assign notes = site.pages | where: "permalink", "/notes/" %}
+{% assign description = site.pages | where: "permalink", "/description/" %}
+
 <nav class="page-nav" markdown="1">
 
 * Toc
@@ -14,6 +17,18 @@ permalink: /notes/
 <section class="content-container" markdown="1">
 
 ## Delivery Notes
+
+### Quick Links
+
+* **Slides (Google Slides):** [https://bit.ly/llc-emojipy]
+* **Notes:** [{{ page.url }}]
+* **Description:** [{{ description.url }}]
+
+#### Trinket
+* **Trinket:** [https://trinket.io]
+* **Demo/Finished Project (Trinket):** [https://bit.ly/clc-emojipy-demo]
+* **Warm-up Sketch (Trinket):** [https://bit.ly/clc-emojipy-warmup]
+* **Starter Project/Sketch (Trinket):** [https://bit.ly/clc-emojipy-starter]
 
 ### Flexible facilitation
 
