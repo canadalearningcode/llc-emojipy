@@ -24,8 +24,17 @@ From machine learning, to web development, to art, to automation, Python's popul
 
 ## Learning objectives
 
+1. Learn basic Python syntax and concepts.
+1. Be introduced to Processing and explore its uses for creating graphics and art.
+1. Use Python code and Processing primitives to create an emoji.
 
+### Stretch milestone objectives:
 
+{: .upper-alpha-list }
+1. Creating and assigning variables; using arithmetic operators; importing modules; lists
+1. Function definition syntax; `def` keyword; specifying and using parameters
+1. Conditional statements with comparison (`==`) and logical (`and`) operators; nested statements/code blocks; Processing's `keyPressed()` and `keyReleased()` functions
+1. Processing style contexts (`pushStyle()` and `popStyle()`).
 
 ## Prerequisites
 

@@ -102,6 +102,10 @@ nav.slides-nav {
         z-index:1000;
     }
 
+ol.upper-alpha-list {
+    list-style-type:upper-alpha;
+}
+
 nav:is(
     .page-nav, 
     .slide-group-nav,
