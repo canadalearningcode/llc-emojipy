@@ -19,7 +19,7 @@ permalink: /notes/
 
 ### Quick Links
 
-* **Slides (Google Slides):** [https://bit.ly/llc-emojipy](https://bit.ly/llc-emojipy)
+* **Slides (Google Slides):** English: [https://bit.ly/llc-emojipy](https://bit.ly/llc-emojipy) & French: [https://go.learningcode.ca/creation-emoji](https://go.learningcode.ca/creation-emoji)
 * **Notes (GitHub Pages):** [{{ page.url | absolute_url }}]({{ page.url | relative_url }})
 * **Description (GitHub Pages):** [{{ description.url | absolute_url }}]({{ description.url | relative_url }})
 
